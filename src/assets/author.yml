@@ -1,0 +1,20 @@
+firstName: Elias
+lastName: Rhouzlane
+bio: 
+  fr: >-
+    Participez à la démocratisation de l'intelligence artificielle pour tous en contribuant à 
+    AI Commons par le biais d'ensembles de données, de modèles d'IA, de modèles de résolution de 
+    problèmes et / ou en soutenant les propriétaires de problèmes et en faisant don de ressources
+    pour la mise en œuvre.
+  en: >-
+    Participate in the democratization of artificial intelligence for everyone by contributing to 
+    AI Commons through datasets, AI models, problem-solving templates, and/or by supporting problem owners and donating resources for problem-solving implementation.
+social:
+  - name: GitHub
+    src: https://github.com/nestarz
+  - name: Linkedin
+    src: https://fr.linkedin.com/in/elias-rhouzlane-56070197
+  - name: Instagram
+    src: https://instagram.com/eliasrhouzlane
+  - name: Twitter
+    src: https://twitter.com/nestarz
