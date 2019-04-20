@@ -1,4 +1,13 @@
 // This is the main.js file. Import global CSS and scripts here.
+require('typopro-web/web/TypoPRO-Lato/TypoPRO-Lato-Hairline.css');
+require('typopro-web/web/TypoPRO-Lato/TypoPRO-Lato-Light.css');
+require('typopro-web/web/TypoPRO-Lato/TypoPRO-Lato-LightItalic.css');
+require('typopro-web/web/TypoPRO-Lato/TypoPRO-Lato-Regular.css');
+require('typopro-web/web/TypoPRO-Junicode/TypoPRO-Junicode.css');
+require('typopro-web/web/TypoPRO-IBMPlex/TypoPRO-IBMPlexSans-Bold.css');
+require('typopro-web/web/TypoPRO-IBMPlex/TypoPRO-IBMPlexSans-Medium.css');
+require('typopro-web/web/TypoPRO-IBMPlex/TypoPRO-IBMPlexSans-Light.css');
+require('typopro-web/web/TypoPRO-IBMPlex/TypoPRO-IBMPlexSans-Regular.css');
 import '~/assets/style/index.scss'
 
 // Import default layout so we don't need to import it to every page
