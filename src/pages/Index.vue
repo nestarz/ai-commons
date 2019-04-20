@@ -31,8 +31,8 @@
                   {{ typeof option === 'string' ? option : option.label }}
                   <div class="description">{{ option.description }}</div>
                 </div>
-                <div @click="select(option)">
-                  <vue-code-highlight v-if="option.code" class="code">{{ option.code }}</vue-code-highlight>
+                <div v-if="false" @click="select(option)">
+                  <vue-code-highlight class="code">{{ option.code }}</vue-code-highlight>
                 </div>
                 <input class="input" type="text" :name="option.label" v-if="option.type == 'input'">
                 <div class="slider" v-if="option.type === 'slider'">
@@ -99,6 +99,10 @@
       li {
         cursor: pointer;
         user-select: none;
+
+        &:hover {
+          background-color: #eee;
+        }
 
         &.active .checkbox {
           background: linear-gradient(
@@ -220,9 +224,7 @@
 
 <script>
 import { component as VueCodeHighlight } from "vue-code-highlight";
-import "vue-code-highlight/themes/prism-coy.css";
 import RangeSlider from "vue-range-slider";
-import "vue-range-slider/dist/vue-range-slider.css";
 
 export default {
   metaInfo: {
