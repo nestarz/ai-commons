@@ -1,0 +1,16 @@
+id: identity
+order: 2
+license: |-
+  ## Contacts
+options:
+  - id: contributor_name
+    title: Name / Pseudonyme
+    type: input
+    required: true
+    license: |-
+      Pour le Contributeur : __contributor_name__
+  - id: email
+    title: Email
+    type: input
+    inputType: email
+    required: true

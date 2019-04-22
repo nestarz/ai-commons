@@ -1,0 +1,89 @@
+id: attributions
+order: 1
+description: >-
+  Le Contributeur accorde à l’Utilisateur le droit personnel, gratuit, non-transmissible,
+  non sous-licenciable et non-exclusif d'utiliser, pour le Monde entier et de manière
+  irrévocable, le Common sous Licence. L’Utilisateur a le droit de reproduire et de
+  partager le Common sous Licence, ainsi que le droit de produire, reproduire et
+  partager (sauf à ce que l’option “Interdiction des Oeuvres Dérivées” ait été
+  sélectionnée dans les Conditions Spécifiques) les éventuelles Oeuvres Dérivées.
+  Les Conditions Spécifiques applicables sont les suivantes:
+license: |-
+  ## Formulaire B: Attributions
+
+  Le présent formulaire B permet au Contributeur de définir des Attributions spécifiques applicables à le Common sous Licence. “Attributions” désigne les conditions dans lesquels s’exercent les droits accordés par la Licence sélectionnés par le Contributeur. Lorsqu’il rempli les présentes Conditions Spécifiques, le Contributeur coche la et/ou les cases correspondant au(x) type(s) de Common(s) qu’il entend faire bénéficier des termes de la présente Licence.
+
+  Le Contributeur déclare que les stipulations suivantes sont applicables à le Common sous Licence :
+options:
+  - id: cite_contributor
+    type: checkbox
+    title: Citation du Contributeur
+    license: |-
+      ### Citation du Contributeur
+
+      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+
+      L’Utilisateur, lorsqu’il reproduit et/ou partage tout ou partie du Common sous Licence (y compris sous une forme modifiée ne constituant pas une Oeuvre Dérivée), ou lorsqu’il reproduit et/ou partage tout ou partie d’une Oeuvre Dérivée du Common sous Licence, est tenu d’apposer de manière lisible sur sa communication du Common sous Licence:
+
+      1.  l’identité (ou le pseudonyme) du Contributeur tel(le) que le Contributeur l’a renseigné ici: __contributor_name__
+      ou de tout personne titulaire des droits de propriété intellectuelle sur le Common dont le Contributeur aurait renseigné l’identité ici : __contributor_name__
+      en indiquant que le Common est protégé par le droit d’auteur et les droits voisins applicables
+      2.  un lien (URL) vers le Common ainsi qu’un lien (URL) vers la présente licence ou un résumé de la présente licence incluant notamment les limitations relatives aux garanties et responsabilité
+      3.  en cas de modification du Common, indiquer qu’il s’agit d’une version modifiée/d’une Oeuvre Dérivée
+
+      L’Utilisateur peut notamment renvoyer (par exemple par copie ou par lien URL) vers le Résumé de la Licence figurant en première page de la Licence Utilisateur).
+
+      Sur simple demande du Contributeur, certaines des informations visées à la présente clause devront être retirées par l’Utilisateur.
+  - id: commercial_uses
+    type: checkbox
+    title: Usages Commerciaux Interdits
+    license: |-
+      ### Usages commerciaux interdits
+
+      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+
+      L’ensemble des droits concédés par le Contributeur à l’Utilisateur dans le cadre de la Licence le sont pour une utilisation non-commerciale uniquement. L’Utilisateur s’interdit de faire usage des droits qui lui sont concédés dans le cadre de la Licence sur le Common sous Licence pour des Usages Commerciaux.
+  - id: derivative_works
+    type: checkbox
+    title: Interdiction des Oeuvres Dérivées
+    license: |-
+      ### Interdiction des Oeuvres dérivés
+
+      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+
+      L’ensemble des droits concédés par le Contributeur à l’Utilisateur dans le cadre de la Licence le sont pour le Common sous Licence uniquement. Le partage des Oeuvres Dérivées du Common sous Licence est prohibé par le Contributeur.
+
+      En conséquences, la clause 3.1 (ii) de la Licence utilisateur est remplacée comme suit:
+
+      1.  l’Utilisateur a le droit de produire, reproduire, mais pas de partager les éventuelles Oeuvres Dérivées du Common sous Licence, dans leur intégralité ou en partie(s).
+  - id: same_conditions_share
+    type: checkbox
+    title: Partage dans les mêmes conditions
+    license: |-
+      ### Partage dans les mêmes conditions de Licence
+
+      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+
+      Tout partage du Common par l’Utilisateur, ainsi que toute transformation ou création à partir du Common par l’Utilisateur, devra être partagée sous les mêmes termes que la présente Licence (incluant la Licence Utilisateur et les Conditions Spécifiques)
+  - id: benefits
+    title: Usages Commerciaux autorisés avec partage des bénéfices à définir entre le Contributeur et l’Utilisateur
+    type: checkbox-slider
+    min: 0
+    max: 100
+    step: 5
+    license: |-
+      ### Usages Commerciaux autorisés avec partage des bénéfices à définir entre le Contributeur et l’Utilisateur
+
+      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+
+      Le périmètre de la Licence concédée par le Contributeur à l’Utilisateur est complété des droits suivants, pour le Common et les Oeuvres Dérivées, ou uniquement pour le Common si le Contributeur a Attribué “Interdiction des Oeuvres Dérivées” :
+
+      1. Le droit de distribution : le droit de commercialiser le Common sous Licence, directement ou indirectement, à titre onéreux ou gratuit, par tout mode d’exploitation y compris la location, le prêt ou la vente du Common sous Licence, la mise à disposition sous forme de licence ou de service externalisé (telle que ASP, SAAS, etc.), selon tout mode ou réseau de distribution (par exemple, VAR, OEM, etc.), en tout ou partie, associé ou non à d’autres du Common sous Licence ou d’autres produits de nature différente, par tout procédé et sur tout support et ce, pour tout public et sans limitation ;
+      
+      2. Le droit d’usage : le droit de faire usage et d’exploiter le Common sous Licence à titre personnel ou au bénéfice de tiers, à titre onéreux ou gratuit, aux fins d’effectuer toutes formes de traitement, notamment infogérance et service bureau, à quelque titre que ce soit.
+
+      Le Contributeur et l’Utilisateur conviennent de partager les bénéfices issus des Usages Commerciaux par l’Utilisateur dans les conditions suivantes (cocher la case) :
+
+      * Bénéfices revenant en totalité à l’Utilisateur
+      
+      * Répartition des bénéfices selon les modalités suivantes: __benefits__

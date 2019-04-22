@@ -19,13 +19,6 @@ body {
   overflow: auto; 
 }
 
-h2, h3 {
-  font-size: 1em;
-  font-weight: normal;
-  margin-top: 0;
-  color: var(--link-color);
-}
-
 a:not(.button) {
   color: var(--link-color);
   transition: opacity 0.2s;

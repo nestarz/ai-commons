@@ -1,0 +1,75 @@
+id: conditions
+order: 0
+description: >
+  Le Common sous Licence visée par la présente Licence est de la/des nature(s) suivante(s):
+license: |-
+  ## Formulaire A
+
+  Le présent formulaire A permet au Contributeur, compte tenu de la nature spécifique du Common qu’il Licencie, de définir des termes spécifiques applicables. Lorsqu’il rempli les présentes Conditions Spécifiques, le Contributeur coche la et/ou les cases correspondant au(x) type(s) de Common(s) qu’il entend faire bénéficier des termes de la présente Licence.
+
+  Le Contributeur déclare que les stipulations suivantes sont applicables à le Common sous Licence :
+options:
+  - id: algorithms
+    type: checkbox
+    title: Algorithmes
+    description: A machine-learning algorithm is a mathematical model that learns to find patterns in the input that is fed to it. This input is referred to as training data.
+    license: |-
+      ### Algorithmes
+
+      Le Common contient un/(des) Algorithme(s)
+    code: >-
+      def train(x, y):
+        weights = 2 * random((3, 1)) - 1
+        for iteration in range(epoch):
+            output = 1 / (1 + exp(-dot(x, weights)))
+            weights += dot(x.T, (y - output) * output * (1 - output))
+
+  - id: models
+    type: checkbox
+    title: Modèles
+    description: Weights and biases are the learnable parameters of your model. When presented with data during training, they are adjusted towards values that have correct output.
+    license: |-
+      ### Modèles
+
+      Le Common contient un/(des) Modèles(s).
+
+      Si le Modèle est accompagné des données d’entraînement, le niveau de confiance est en ce modèle est fort pour l’Utilisateur. A l’inverse, si le Modèle n’est pas accompagné des données d'entraînement, l’Utilisateur est mis en garde contre le faible niveau de confiance du Modèle.
+    code: >-
+      weights = train(x, y) 
+      >>> [0.12,0.1981,0.679,0.235]
+
+  - id: database
+    type: checkbox
+    title: Bases de données
+    license: |-
+      ### Bases de données
+
+      Le Common contient un/(des) Base(s) de données
+
+      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+
+      * **Protection PI des bases de données.** Une base de données est « un recueil d’œuvres, de données ou d’autres éléments indépendants, disposés de manière systématique ou méthodique, et individuellement accessibles par des moyens électroniques ou par tout autre moyen. ». La structure d’un base de données, c’est-à-dire la manière dont les données sont organisées, est protégée par le droit d’auteur.
+      * **Droit sui generis des bases de données** Outre le droit d’auteur qui protège la structure de la base de données, son contenu fait l’objet protection sui generis par le droit de la propriété intellectuelle. Le droit sui generis des bases de données a la signification qui lui ai donnée dans la Licence Utilisateur. A titre de clarification, le Contributeur concède à l’Utilisateur a le droit d’extraire, réutiliser, reproduire et partager (à l’exception du partage des Oeuvres Dérivées si le Contributeur a sélectionné l’Attribution “Interdiction des Oeuvres Dérivées”) tout ou partie (et ce incluant “une partie quantitativement ou qualitativement significative”) du contenu de la base de données. Si l’Utilisateur utilise une partie quantitativement ou qualitativement significative de la base de donnée en l’incluant dans une base de données dont il est producteur, cette seconde base de données est une Oeuvre Dérivée.
+    code: >-
+      X = [[0, 0, 1], 
+          [1, 1, 1], 
+          [1, 0, 1],
+          ...
+          [0, 1, 1]]
+      Y = [[0, 1, 1, ..., 0]].T
+  
+  - id: traindata
+    type: checkbox
+    title: Données d'entraînement
+    license: |-
+      ### Données d'entraînement
+
+      Le Common contient un/(des) Base(s) de données
+
+      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+
+      * **Protection PI des bases de données.** Une base de données est « un recueil d’œuvres, de données ou d’autres éléments indépendants, disposés de manière systématique ou méthodique, et individuellement accessibles par des moyens électroniques ou par tout autre moyen. ». La structure d’un base de données, c’est-à-dire la manière dont les données sont organisées, est protégée par le droit d’auteur.
+      * **Droit sui generis des bases de données** Outre le droit d’auteur qui protège la structure de la base de données, son contenu fait l’objet protection sui generis par le droit de la propriété intellectuelle. Le droit sui generis des bases de données a la signification qui lui ai donnée dans la Licence Utilisateur. A titre de clarification, le Contributeur concède à l’Utilisateur a le droit d’extraire, réutiliser, reproduire et partager (à l’exception du partage des Oeuvres Dérivées si le Contributeur a sélectionné l’Attribution “Interdiction des Oeuvres Dérivées”) tout ou partie (et ce incluant “une partie quantitativement ou qualitativement significative”) du contenu de la base de données. Si l’Utilisateur utilise une partie quantitativement ou qualitativement significative de la base de donnée en l’incluant dans une base de données dont il est producteur, cette seconde base de données est une Oeuvre Dérivée.
+    code: >-
+      x = X[1, 100] // subset(X)
+      y = Y[1, 100] // subset(Y)

@@ -1,7 +1,10 @@
 <template>
+  <div>
+    <slot/>
+  </div>
 </template>
 
-<static-query>
+</static-query>
 query {
   metaData {
     siteName
@@ -10,8 +13,7 @@ query {
 </static-query>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>

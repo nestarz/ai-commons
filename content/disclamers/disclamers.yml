@@ -1,0 +1,190 @@
+id: disclamer
+license: |-
+  # AI Commons - Licence Utilisateur
+
+  AI Commons met à disposition les licences AI Commons “en l’état”, c’est-à-dire sans aucune garantie relative aux dites Licences, aux Commons sous Licence, ou à toute autre information ou Service AI Commons sur la Plateforme en général. AI Commons n’est pas partie au présent contrat de Licence  Utilisateur, conclu entre le Contributeur et l’Utilisateur seulement. AI Commons décline formellement toute responsabilité quant aux préjudices pouvant résulter de son utilisation et/ou de l’utilisation du Common sous Licence. 
+
+  VEUILLEZ LIRE ATTENTIVEMENT LA PRÉSENTE LICENCE QUI CONSTITUE UN CONTRAT ENTRE L’UTILISATEUR ET LE CONTRIBUTEUR. EN ACCEPTANT LA PRÉSENTE LICENCE, EN TÉLÉCHARGEANT, EN ACCÉDANT OU DE TOUTE AUTRE FAÇON EN UTILISANT LE COMMON SOUS LICENCE, L’UTILISATEUR ACCEPTE D’ÊTRE LIÉ PAR LES TERMES DE CELLE-CI. LA LICENCE SE COMPOSE DE LA PRÉSENTE LICENCE UTILISATEUR, DES CGP, AINSI QUE DES TERMES SPÉCIFIQUES DÉFINIS PAR LE CONTRIBUTEUR POUR LE COMMON DANS LES CONDITIONS SPÉCIFIQUES.
+
+
+  **RÉSUMÉ:** **(Disclaimer: ce résumé ne dispense pas l'Utilisateur de prendre connaissance des termes de la Licence, incluant la Licence Utilisateur et les Conditions Spécifiques.)**
+  **Le Common sous Licence visée par la présente Licence est de la/des nature(s) suivante(s) :**
+  - **Algorithmes**
+  - **Modèles**
+  - **Bases de données**
+  - **Données d'entraînement**
+
+  **Le Contributeur accorde à l’Utilisateur le droit personnel, gratuit, non-transmissible, non sous-licenciable et non-exclusif d'utiliser, pour le Monde entier et de manière irrévocable, le Common sous Licence. L’Utilisateur a le droit de reproduire et de partager le Common sous Licence, ainsi que le droit de produire, reproduire et partager (sauf à ce que l’option “Interdiction des Oeuvres Dérivées” ait été sélectionnée dans les Conditions Spécifiques) les éventuelles Oeuvres Dérivées. Les Conditions Spécifiques applicables sont les suivantes:**
+  - **Citation du Contributeur**
+  - **Usages Commerciaux Interdits**
+  - **Interdiction des Oeuvres Dérivées**
+  - **Partage dans les mêmes conditions**
+  - **Usages Commerciaux autorisés avec partage des bénéfices à définir entre le Contributeur et l'Utilisateur**
+
+  ## 1. Préambule
+
+  La présente Licence est conclue entre le Contributeur et l’Utilisateur (ci-après, “les Parties”) et a pour objet de définir les conditions dans lesquelles le Contributeur accorde à l’Utilisateur, qui l'accepte, le droit personnel, gratuit, non transmissible et non sous licenciable et non exclusif d'utiliser, pour le Monde entier et de manière irrévocable, le Common sous Licence tel que décrit dans la présente Licence, SOUS RÉSERVE DES DISPOSITIONS CONTENUES DANS LES CONDITIONS SPÉCIFIQUES. Lorsque l’Utilisateur accepte les termes de la présente Licence (définis ci-dessous), l’Utilisateur accepte d'être lié par les termes et conditions de la présente Licence et de les exécuter.
+
+  L’ensemble contractuel liant l’Utilisateur et le Contributeur aux termes de la présente Licence Utilisateur se compose :
+
+  - des Conditions Générales d'utilisation de la Plateforme (CGP) acceptées au préalable par l'Utilisateur et le Contributeur,
+  - de la présente licence Utilisateur, et
+  - des Conditions Spécifiques telles que sélectionnées et attribuées à le Common sous Licence par le Contributeur.
+
+  Les documents contractuels sont, par ordre de priorité décroissant :
+
+  - Les CGP,
+  - La présente Licence Utilisateur conclue entre l'Utilisateur et le Contributeur,
+  - Les Conditions Spécifiques conclues entre l'Utilisateur et le Contributeur.
+
+  ## 2.Définitions
+
+  **Les termes ci-dessous définis auront entre les Parties la signification suivante :**
+
+  **Attributions.**&quot;Attributions&quot; désigne les conditions dans lesquelles s'exercent les droits accordés par la Licence sélectionnés par le Contributeur et reproduites dans les Conditions Spécifiques. Les Attributions sélectionnées par le Contributeur prévalent sur les termes de la présente Licence Utilisateur.
+
+  **Licence.**&quot;Licence&quot; ou &quot;Licence AI Commons&quot; désigne l'ensemble contractuel liant l'Utilisateur et le Contributeur se compose :
+
+  - des Conditions Générales d'utilisation de la Plateforme (CGP) acceptées au préalable par l'Utilisateur et le Contributeur lors de leur accès à la Plateforme,
+  - de la présente Licence Utilisateur, et
+  - des Conditions Spécifiques telles que sélectionnées et attribuées à le Common sous Licence par le Contributeur, annexées à la présente Licence Utilisateur.
+
+  **Contributeur.**&quot;Contributeur&quot; désigne la personne physique ou morale octroyant les droits et devoirs à l'Utilisateur par la présente Licence.
+
+  **Common sous Licence.**&quot;Common sous Licence&quot; désigne l'oeuvre littéraire ou artistique, algorithme, base de données, données d'entraînement ou le modèle sur lequel le Contributeur accorde à l'Utilisateur la présente Licence. La nature du Common sous Licence et les différentes attributions spécifiques sélectionnées par le Contributeur pour celle-ci lors de sa mise en ligne du Common sont détaillées dans les Conditions Spécifiques.
+
+  **Droit sui generis des bases de données.**&quot;Droit sui generis des bases de données&quot; est un droit distinct du droit d'auteur sur les bases de données issu notamment de la Directive 96/9/CE du Parlement Européen et du Conseil du 11 mars 1996 sur la protection des bases de données. Ce droit suis generis désigne le droit et la protection dont bénéficie le producteur d'une base de données sur le  contenu de la base lorsque la constitution, la vérification ou la présentation de celui-ci atteste d'un investissement financier, matériel ou humain substantiel.
+
+  **Licence de l'Oeuvre Dérivée.**&quot;Licence de l'Oeuvre Dérivée&quot; désigne la licence sous laquelle l'Utilisateur partage une Oeuvre Dérivée du Common sous Licence.
+
+  **Oeuvre Dérivée.**&quot;Oeuvre Dérivée&quot; désigne une Oeuvre protégée par le droit d'auteur créée par l'Utilisateur à partir du Common sous Licence, en tout ou partie, ou l'incorporant, sans le concours du Contributeur.
+
+  **Plateforme.**&quot;Plateforme&quot; désigne la plateforme AI Commons accessible en ligne à l'adresse [https://aicommons.com/](https://aicommons.com/)
+
+  **Usages Commerciaux.**&quot;Usages Commerciaux&quot; désigne l'utilisation du Common sous Licence par l'Utilisateur en vue d'obtenir un avantage commercial ou une compensation/des bénéfices de nature financière.
+
+  **Utilisateur.**&quot;Utilisateur&quot; désigne la personne physique ou morale bénéficiaire des droits et devoirs octroyés par la présente Licence
+
+  ## 3.Périmètre
+
+  La concession par le Contributeur des droits ci-après énumérés est conditionnée au respect par l'Utilisateur des termes de la présente Licence.
+
+  ### 3.1 Licence
+
+  Par la présente Licence, le Contributeur accorde à l'Utilisateur, qui l'accepte, pour la Durée telle que définie en article 6, le droit personnel, gratuit, non transmissible et non sous licenciable et non exclusif d'utiliser, pour le Monde entier et de manière irrévocable (sauf exercice des dispositions de la clause 6 &quot;Durée et Résiliation&quot;), le Common sous Licence de la manière suivante (sous réserve des éventuelles limitation et exceptions applicables à le Common sous Licence, notamment prévues dans les Conditions Spécifiques) :
+
+  1. (i) l'Utilisateur a le droit de reproduire et de partager le Common sous Licence,
+
+  2. (ii) l'Utilisateur a le droit de produire, reproduire et partager les éventuelles Oeuvres Dérivées (étant précisé que le partage est prohibé dans l'hypothèse où les Conditions Spécifiques prévoient l'interdiction des Oeuvres Dérivées) du Common sous Licence, dans leur intégralité ou en partie(s), sous réserve des stipulations des Conditions Spécifiques.
+
+  ### 3.2 Limitations et Conditions Spécifiques
+
+  La présente Licence est concédée sous réserve des éventuelles limitations et exceptions applicables à le Common sous Licence, notamment prévues dans les conditions spécifiques qui sont parties intégrante de la Licence qui lie l'Utilisateur et le Contributeur, et qui peuvent notamment prévoir :
+
+  1. (i) L'interdiction des Usages Commerciaux, et/ou
+
+  2. (ii) L'interdiction des Oeuvres Dérivées.
+
+  En tout état de cause, si l'Utilisateur du Common sous Licence reproduit et partage une Oeuvre Dérivée du Common sous Licence, la Licence de l'Oeuvre Dérivée ne devra pas porter atteinte aux termes de la présente Licence et à l'utilisation du Common sous Licence par ses utilisateurs.
+
+  ### 3.3 Etendue des droits concédés
+
+  Sous réserve des éventuelles limitations contenues dans les Conditions Spécifiques, il est précisé que les droits concédés comprennent, pour toute la durée de la Licence :
+
+  1. (i) Le droit de reproduction :_ le droit de reproduire tout ou partie du Common sous Licence, sans limitation de nombre, sur tous supports connus ou inconnus ;
+
+  2. (ii) Le droit d'adaptation :_ le droit de modifier tout ou partie du Common sous Licence, d'en faire la maintenance corrective, adaptative et évolutive, d'en réaliser de nouvelles versions ou de nouveaux développements, décompiler, réécrire, traduire en toute langue, transcrire dans tout langage de programmation, porter sur toute configuration,  interfacer avec tout logiciel, base de données, produit  informatique, d'en réutiliser les algorithmes à toutes fins, d'en intégrer tout ou partie vers ou dans des œuvres existantes ou à venir, et ce sur tous supports mentionnés au présent article.
+
+  3. Le droit de représentation :_ le droit de communiquer au public le Common sous Licence, directement ou indirectement, par tout moyen ou réseau de communication connu ou inconnu, sous toute forme, et auprès du public en général ou de catégories de public en particulier, de manière que chacun puisse y avoir accès de l'endroit et au moment qu'il choisit individuellement.
+
+  En tout état de cause, l'Utilisateur s'interdit de partager le Common sous Licence dans des conditions techniques ou sous des termes de nature à restreindre son utilisation par rapport aux conditions de la présente Licence.
+
+  ### 3.4 Supports
+
+  Pour l'ensemble des droits susvisés, sont compris les modes d'exploitation par tous que les vecteurs, médias, techniques ou supports de communication, de toute nature, connus ou inconnus, et notamment :la diffusion directe ou indirecte par tout moyen électronique, de télécommunication et de communication électronique, satellitaire ou par câble,la télévision par voie hertzienne terrestre ou spatiale, analogique ou numérique,  la radio, les réseaux intranet et internet, les réseaux de téléphonie fixe ou mobile,toute technologie client-serveur, client-léger, client-lourd, nuage de données, les supports de toute nature, papier, électronique, magnétique, optique, disque, réseau, disquette, DVD, CDV, CDI, CD Rom, CD Worm, ordinateurs, smartphones, tablettes numériques , ainsi que la reproduction sur tout objet, matière ou matériaux. L'Utilisateur est autorisé à procéder aux modifications techniques rendues nécessaires par les supports pour lui permettre d'exercer les droits de la présente Licence. Le fait de procéder à des modifications techniques rendues nécessaires par un support ne donne pas lieu à la création d'une Oeuvre Dérivée.
+
+  ### 3.5 Savoir-faire et méthodes.
+
+  Chaque Partie conserve la propriété des méthodes, savoir-faire et droits de  propriété intellectuelle qu'elle possédait antérieurement à la présente Licence (les connaissances antérieures).
+
+  En tant que de besoin, le Contributeur concède à l'Utilisateur une licence non-exclusive gratuite sur ses connaissances antérieures, dans la mesure où elles sont nécessaires à l'exercice par l'Utilisateur des droits qu'elle a acquis en vertu de la présente Licence. Le savoir-faire que l'Utilisateur acquiert à l'occasion de la présente Licence, lui reste définitivement acquis et peut-être exploité librement par lui, y compris si ce savoir-faire intègre des connaissances antérieures du Contributeur. De manière générale, le Contributeur s'interdit d'opposer à l'Utilisateur ses connaissances antérieures, notamment les brevets dont il serait titulaire, pour empêcher ou entraver l'exercice par l'Utilisateur des droits qu'il a acquis en vertu de la présente Licence.
+
+  ### 3.6 Autres droits de propriété intellectuelle
+
+  La présente Licence ne porte pas sur les droits moraux du Common sous Licence (tels que le droit à l'intégrité de l'œuvre), ni les éventuels brevets portant sur le Common sous Licence (&quot;les autres droits de propriété intellectuelle), ni les droits connexes tels que le droit sui generis des bases de données.
+
+  En tout état de cause, il est convenu entre les Parties que le Contributeur, titulaire de ces autres droits de propriété intellectuelle, Licencie le Common en vue de permettre son utilisation sous Licence par l'Utilisateur et s'engage en conséquence à exercer dans la moindre mesure possible ces autres droits de propriété intellectuelle portant sur le Common sous Licence.
+
+  ### 3.7 Attributions
+
+  La présente Licence est concédée par le Contributeur à l'Utilisateur sous réserve par celui-ci des termes de la Licence et ce incluant les Conditions Spécifiques attribuées à le Common par le Contributeur.
+
+  Les Conditions Spécifiques applicables à la présente Licence et acceptées par l'Utilisateur sont attachées en Annexe de la présente Licence Utilisateur.
+
+  ## 4.Garanties
+
+  Le Contributeur accorde une licence sur le Common sous Licence &quot;en-l'état&quot; et ne garantit pas, en conséquence, l'Utilisateur contre les éventuels défauts de fonctionnement et anomalies du Common sous Licence. Le Contributeur déclare être propriétaire ou avoir les droits de concéder des Licences sur les Commons sous Licences via l'utilisation des Services AI Commons et/ou de la Plateforme.
+
+  ## 5.Responsabilité et préjudice
+
+  Le Contributeur exclut de sa responsabilité à l'égard de l'Utilisateur au titre de la présente Licence sur quelque fondement juridique de responsabilité que ce soit, tout dommage (perte ou dépense), qu'il soit direct ou indirect, punitif ou consécutif, découlant de l'utilisation de la présente Licence et/ou du Common sous Licence, que de tels dommages aient été prévisibles ou non ou que l'Utilisateur ait été informé de la possibilité de tels dommages au préalable ou non.
+
+  ## 6.Durée et résiliation
+
+  ### 6.1 Durée
+
+  La présente Licence entre en vigueur à la date d'acceptation par les Parties. Elle est accordée pour la durée de protection des droits conférés sur le Common sous Licence par les lois, actuelles et futures, régissant la propriété intellectuelle, sauf disposition contraire aux présentes et sous réserve de l'application éventuelle de l'article Résiliation.
+
+  ### 6.2 Résiliation.
+
+  En cas de manquement par l'Utilisateur à quelconque obligation des présentes, la Licence sera automatiquement suspendue. L'Utilisateur disposera alors d'un délai de 30 jours pour réparer son manquement à compter de la date à laquelle il aura pris connaissance du manquement en cause. Si l'Utilisateur met fin à son manquement dans ce délai, la suspension de la Licence prendra fin.
+
+  En cas de manquement par l'une des parties à quelconque obligation des présentes non réparé dans le délai de 30 jours à compter de l'information du manquement en cause, la Licence sera résiliée de plein droit, sans préjudice de tous dommages et intérêts auxquelles elle pourrait prétendre en vertu des présentes.
+
+  Le fait pour le Contributeur de Licencier le Common sous Licence sous d'autres termes et conditions en parallèle de la présente Licence ou de cesser la mise à disposition du Common sous Licence n'entraîne pas la résiliation de la présente Licence.
+
+  ## 7.Dispositions générales
+
+  ### 7.1 Force majeure.
+
+  Les cas de force majeure suspendront l'exécution de la Licence. Si l'empêchement est définitif, la Licence est résolu de plein droit et les parties sont libérées de leurs obligations dans les conditions prévues aux articles 1351 et 1351-1 du Code civil. De façon expresse, sont considérés comme cas de force majeure ou cas fortuits ceux habituellement retenus par la jurisprudence des cours et tribunaux français.
+
+  ### 7.2 Autorisations légales.
+
+  Les parties s'engagent à disposer de l'ensemble des autorisations légales et administratives nécessaires à l'exécution des présentes. Les parties s'engagent à collaborer pour la réalisation de nouvelles autorisations légales et administratives et pour toutes modifications d'autorisations déjà réalisées.
+
+  ### 7.3 Tolérance.
+
+  Les parties conviennent réciproquement que le fait pour l'une des parties de tolérer une situation n'a pas pour effet d'accorder à l'autre partie des droits acquis. De plus, une telle tolérance ne peut être interprétée comme une renonciation à faire valoir les droits en cause.
+
+  ### 7.4 Sincérité
+
+  Les parties déclarent sincères les présents engagements. À ce titre, elles déclarent ne disposer d'aucun élément à leur connaissance qui, s'il avait été communiqué, aurait modifié le consentement de l'autre partie.
+
+  ### 7.5 Indépendance des parties.
+
+  Les parties reconnaissent agir chacune pour leur propre compte comme des parties indépendantes l'une de l'autre et déclarent expressément qu'elles sont et demeureront, pendant toute la durée de la présente convention, des partenaires commerciaux et professionnels indépendants. La présente Licence ne constitue ni une association, ni une franchise, ni un mandat donné par l'une des parties à l'autre partie et ne saurait en aucun cas être interprété comme un contrat d'agence commerciale, ni de représentation quelconque. Aucune des parties ne peut prendre un engagement au nom et pour le compte de l'autre partie. En outre, chacune des parties demeure seule responsable de ses actes, allégations, engagements, prestations, produits et personnels.
+
+  ### 7.6 Titres.
+
+  En cas de difficultés d'interprétation résultant d'une contradiction entre l'un quelconque des titres figurant en tête des clauses et l'une quelconque des clauses, les titres seront déclarés inexistants.
+
+  ### 7.7 Nullité.
+
+  Si une ou plusieurs stipulations de la présente Licence sont tenues pour non valides ou déclarées comme telles en application d'une loi, d'un règlement ou à la suite d'une décision passée en force de chose jugée d'une juridiction compétente, les autres stipulations garderont toute leur force et leur portée.
+
+  ### 7.8 Intégralité.
+
+  La présente Licence annule et remplace tous quasi-contrats, engagements implicites et explicites, promesses ayant le même objet que les présentes. Toutefois, la présente clause n'a pas pour objet d'empêcher l'utilisation desdits documents mais d'évaluer sur le plan juridique la qualité des consentements échangés lors de la formation des présentes.
+
+  ### 7.9 Survie de certaines dispositions
+
+  Les articles 1, 2, 4, 5, 6, et 7 survivront après la résiliation ou l'expiration de la présente Licence.
+
+  ### 7.10 Cession.
+
+  La présente Licence ne pourra faire l'objet d'une cession totale ou partielle, à titre onéreux ou gracieux, par l'une des parties, sans l'accord écrit et préalable de l'autre partie.
+
+  ### 7.11 Communication entre les Parties.
+
+  Pour l'exécution de la présente Licence et sauf dispositions particulières, les parties conviennent de s'adresser toute correspondance aux adresses (postale et/ou électronique) renseignée par l'Utilisateur et le Contributeur dans les Conditions Spécifiques. Tout changement d'adresse devra être signalé à l'autre partie.
