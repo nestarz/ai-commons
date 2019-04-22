@@ -34,8 +34,8 @@ options:
       Le Common contient un/(des) Modèles(s).
 
       Si le Modèle est accompagné des données d’entraînement, le niveau de confiance est en ce modèle est fort pour l’Utilisateur. A l’inverse, si le Modèle n’est pas accompagné des données d'entraînement, l’Utilisateur est mis en garde contre le faible niveau de confiance du Modèle.
-    code: >-
-      weights = train(x, y) 
+    code: |-
+      weights = train(x, y)
       >>> [0.12,0.1981,0.679,0.235]
 
   - id: database
@@ -70,6 +70,6 @@ options:
 
       * **Protection PI des bases de données.** Une base de données est « un recueil d’œuvres, de données ou d’autres éléments indépendants, disposés de manière systématique ou méthodique, et individuellement accessibles par des moyens électroniques ou par tout autre moyen. ». La structure d’un base de données, c’est-à-dire la manière dont les données sont organisées, est protégée par le droit d’auteur.
       * **Droit sui generis des bases de données** Outre le droit d’auteur qui protège la structure de la base de données, son contenu fait l’objet protection sui generis par le droit de la propriété intellectuelle. Le droit sui generis des bases de données a la signification qui lui ai donnée dans la Licence Utilisateur. A titre de clarification, le Contributeur concède à l’Utilisateur a le droit d’extraire, réutiliser, reproduire et partager (à l’exception du partage des Oeuvres Dérivées si le Contributeur a sélectionné l’Attribution “Interdiction des Oeuvres Dérivées”) tout ou partie (et ce incluant “une partie quantitativement ou qualitativement significative”) du contenu de la base de données. Si l’Utilisateur utilise une partie quantitativement ou qualitativement significative de la base de donnée en l’incluant dans une base de données dont il est producteur, cette seconde base de données est une Oeuvre Dérivée.
-    code: >-
-      x = X[1, 100] // subset(X)
-      y = Y[1, 100] // subset(Y)
+    code: |-
+      x = X[1, 100]
+      y = Y[1, 100]

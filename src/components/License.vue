@@ -1,15 +1,11 @@
 <template>
-  <div ref="license">
+  <div ref="license" class="license">
     <vue-markdown
       v-for="({ node: { license } }, index) in $static.allPreambules.edges"
       :source="license"
       :key="index"
     ></vue-markdown>
-    <vue-markdown
-      v-for="(paragraph, index) in paragraphs"
-      :source="paragraph"
-      :key="index"
-    ></vue-markdown>
+    <vue-markdown v-for="(paragraph, index) in paragraphs" :source="paragraph" :key="index"></vue-markdown>
   </div>
 </template>
 
@@ -30,7 +26,7 @@ query allPreambules {
 import VueMarkdown from "vue-markdown-v2";
 
 export default {
-  props: ["steps", "options"],
+  props: ["forms"],
   data() {
     return {
       benefits: 0,
@@ -39,18 +35,19 @@ export default {
   },
   computed: {
     paragraphs() {
-      const res = this.steps
+      console.log(this.forms);
+      const res = this.forms
         .filter(
-          step =>
-            step.options.filter(
+          form =>
+            form.options.filter(
               option =>
                 !["checkbox", "checkbox-slider"].includes(option.type) ||
                 option.check === true
             ).length > 0
         )
-        .flatMap(step => [
-          step.license,
-          step.options
+        .flatMap(form => [
+          form.license,
+          form.options
             .filter(
               option =>
                 !["checkbox", "checkbox-slider"].includes(option.type) ||
@@ -77,11 +74,28 @@ export default {
     },
     replaceFields(string) {
       const regex = varname => new RegExp(`__${varname}__`, "g");
-      return this.options.reduce(
-        (str, option) => str.replace(regex(option.id), option.value),
-        string
-      );
+      return this.forms
+        .flatMap(forms => forms.options)
+        .reduce(
+          (str, option) => str.replace(regex(option.id), option.value),
+          string
+        );
     }
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.license {
+  padding: 1rem;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+</style>

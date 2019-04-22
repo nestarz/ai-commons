@@ -5,12 +5,11 @@ license: |-
 options:
   - id: contributor_name
     title: Name / Pseudonyme
-    type: input
+    type: text
     required: true
     license: |-
       Pour le Contributeur : __contributor_name__
   - id: email
     title: Email
-    type: input
-    inputType: email
+    type: email
     required: true
