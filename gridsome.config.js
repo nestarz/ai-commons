@@ -7,6 +7,7 @@
 module.exports = {
   siteName: 'aicommons',
   chainWebpack: config => {
+    config.mode('development')
     config.module
       .rule('raw-loader')
       .test(/\.md$/i)
