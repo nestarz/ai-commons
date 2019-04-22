@@ -36,7 +36,7 @@ query allDisclamers {
 .disclamers {
   padding: 1em;
   max-width: 40rem;
-  border-left: 1px solid black;
+  border-left: 1px solid #6b17e6;
   margin-left: auto;
 }
 </style>

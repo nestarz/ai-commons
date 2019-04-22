@@ -2,20 +2,26 @@
   <div class="index">
     <div class="main">
       <div class="header">
-        <h1>AI Commons Licence</h1>
-        <ul>
-          <li v-for="option in optionsActives" :key="option.id">
+        <h1>
+          <div @click="prev(0)"><g-link to="/">AI Commons Licence</g-link></div>
+        </h1>
+        <ul class="desktop">
+          <li
+            v-for="option in options"
+            :key="option.id"
+            v-show="(['checkbox', 'checkbox-slider'].includes(option.type) && option.check === true) || option.value"
+          >
             <div>{{ option.title }}</div>
+            <div v-if="option.value" class="value">{{ option.value }}{{ option.type === 'checkbox-slider' ? '%' : ''}}</div>
           </li>
         </ul>
       </div>
-      <div>
+      <div class="about" :class="{desktop: currentStep !== 0}">
         <p>
-          This chooser helps you determine which AI Commons License is
-          <span>right for you</span> in a few easy steps.
-          If you are new to AI Commons, you may also want to read
-          <g-link to="/disclamers">Licensing Considerations</g-link> before you get
-          started.
+          Ce guide vous aide à déterminer quelle licence AI Commons vous convient
+          le mieux en quelques étapes simples. Si vous êtes nouveau,
+          vous pouvez également lire les
+          <g-link to="/disclamers">Licensing Considerations</g-link> avant de commencer.
         </p>
       </div>
     </div>
@@ -175,14 +181,8 @@ export default {
   },
   data() {
     return {
-      firstName: null,
-      lastName: null,
-      pseudo: null,
-      email: null,
       currentStep: 0,
       optionHover: null,
-      inputs: {},
-      sliderValue: 50,
       selectedOptions: []
     };
   }
@@ -208,6 +208,11 @@ export default {
     opacity: 1;
   }
 }
+.desktop {
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
 .index {
   min-height: 100%;
   display: grid;
@@ -221,7 +226,7 @@ export default {
   }
   .code {
     overflow: hidden;
-    border-top: 1px solid black;
+    border-top: 1px dashed #6b17e6;
     font-size: 0.7rem;
     display: none;
     @media screen and (min-width: 1000px) {
@@ -265,8 +270,8 @@ export default {
     .pager {
       display: flex;
       justify-content: space-between;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
+      border-top: 1px solid #6b17e6;
+      border-bottom: 1px solid #6b17e6;
       .previous,
       .next,
       .save {
@@ -279,7 +284,7 @@ export default {
         }
       }
       .previous {
-        border-right: 1px solid black;
+        border-right: 1px solid #6b17e6;
       }
     }
     .steps {
@@ -301,7 +306,7 @@ export default {
                 to top left,
                 rgba(0, 0, 0, 0) 0%,
                 rgba(0, 0, 0, 0) calc(50% - 0.8px),
-                rgba(0, 0, 0, 1) 50%,
+                #6b17e6 50%,
                 rgba(0, 0, 0, 0) calc(50% + 0.8px),
                 rgba(0, 0, 0, 0) 100%
               ),
@@ -309,37 +314,37 @@ export default {
                 to top right,
                 rgba(0, 0, 0, 0) 0%,
                 rgba(0, 0, 0, 0) calc(50% - 0.8px),
-                rgba(0, 0, 0, 1) 50%,
+                #6b17e6 50%,
                 rgba(0, 0, 0, 0) calc(50% + 0.8px),
                 rgba(0, 0, 0, 0) 100%
               );
           }
           .checkbox {
             content: "";
-            border-right: 1px solid black;
+            border-right: 1px solid #6b17e6;
           }
 
           &:first-child {
-            border-top: 1px solid black;
+            border-top: 1px solid #6b17e6;
           }
 
           .content {
-            padding: 0 1em;
+            padding: 0.25em 1em;
           }
           .slider {
-            border-top: 1px solid black;
+            border-top: 1px solid #6b17e6;
             display: flex;
             justify-content: center;
             align-items: center;
             .value {
               padding: 1em;
-              border-right: 1px solid black;
+              border-right: 1px solid #6b17e6;
             }
           }
 
           .input {
             border: 0;
-            border-top: 1px solid #000;
+            border-top: 1px solid #6b17e6;
             width: 100%;
             font-size: inherit;
             padding: 0;
@@ -350,7 +355,7 @@ export default {
           display: grid;
           grid-template-columns: 0.1fr 1fr;
           grid-gap: 1em 0;
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid #6b17e6;
           margin: 0;
           list-style: none;
 
@@ -367,21 +372,44 @@ export default {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    .about {
+      @media screen and (max-width: 600px) {
+        border-bottom: 1px solid #6b17e6;
+      }
+    }
     .header {
       width: 100%;
       h1 {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #6b17e6;
         font-weight: 100;
         font-size: larger;
         text-transform: uppercase;
       }
-      ul,
+      li,
       h1 {
         padding: 1em;
+        margin: 0;
+      }
+      li {
+        border-bottom: 1px solid #6b17e6;
+        display: flex;
+        grid-template-columns: 0.8fr 0.2fr;
+        padding: 0;
+        & > * {
+          display: flex;
+          padding: 0.25em 1em;
+          justify-content: center;
+          align-items: center;
+        }
+        .value {
+          border-left: 1px solid #6b17e6;
+          padding-left: 1em;
+          margin-left: 1em;
+        }
       }
     }
     p {
-      border-top: 1px solid black;
+      border-top: 1px solid #6b17e6;
     }
     ul {
       margin: 0;
@@ -400,7 +428,7 @@ export default {
   .main,
   .panel {
     display: flex;
-    border-right: 1px solid #111;
+    border-right: 1px solid #6b17e6;
     @media screen and (min-width: 600px) {
       max-height: 100vh;
       overflow-y: scroll;
