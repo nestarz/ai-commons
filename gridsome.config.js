@@ -13,10 +13,10 @@ module.exports = {
       .test(/\.md$/i)
       .use("raw-loader")
       .loader("raw-loader");
-    config.module
-      .rule("postcss-loader")
-      .test(/\.css$/)
-      .use(["autoprefixer", require("postcss-input-range")])
-      .loader("postcss-loader");
+    // config.module
+    //   .rule("postcss-loader")
+    //   .test(/\.css$/)
+    //   .use(["autoprefixer"])
+    //   .loader("postcss-loader");
   }
 };

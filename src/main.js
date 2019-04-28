@@ -5,7 +5,7 @@ import '~/assets/style/index.scss'
 import DefaultLayout from '~/layouts/Default.vue'
 
 import Vuex from 'vuex'
-import VueHighlightJS from 'vue-highlightjs'
+
 
 const langs = {
   "fr": {
@@ -21,7 +21,7 @@ const langs = {
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.use(Vuex);
-  Vue.use(VueHighlightJS);
+  
   appOptions.store = new Vuex.Store({
     state: {
       lang: typeof navigator == "undefined" ? langs["fr"] : 

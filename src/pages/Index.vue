@@ -2,7 +2,9 @@
   <div class="index">
     <div class="side">
       <div class="header">
-        <g-link to="/" class="title">AI Commons Licence</g-link>
+        <g-link to="/" class="title">
+          <g-image src="https://aicommons.com/wp-content/uploads/2019/02/AIC-logo-white-1@3x.png"/>
+        </g-link>
       </div>
       <div class="fields">
         <div class="field" v-for="field in actives" :key="field.id">
@@ -14,11 +16,10 @@
         </div>
       </div>
       <div class="about">
-        This chooser helps you determine which AI Commons License is
-        <span>right for you</span> in a few easy steps.
-        If you are new to AI Commons, you may also want to read
-        <g-link to="/disclamers">Licensing Considerations</g-link>&nbsp;before you get
-        started.
+        This chooser helps you to specify the conditions under which you want to share your work
+        If you are new, please read more about
+        <g-link to="http://www.aicommons.com">AI Commons</g-link>.
+        <!-- Partager vos traLink to AI Commons -->
       </div>
     </div>
     <div class="main">
@@ -123,10 +124,15 @@ export default {
 .pager {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #6b17e6;
-  border-bottom: 1px solid #6b17e6;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   user-select: none;
   margin-top: 2rem;
+  background-color: #111;
+  color: white;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1rem;
 
   .previous,
   .next,
@@ -136,11 +142,11 @@ export default {
     text-align: center;
     cursor: pointer;
     &:hover {
-      background-color: #eee;
+      background-color: #444;
     }
   }
   .previous {
-    border-right: 1px solid #6b17e6;
+    border-right: 1px solid var(--border-color);
   }
 }
 
@@ -158,7 +164,7 @@ export default {
   .side,
   .main {
     display: flex;
-    border-right: 1px solid #6b17e6;
+    border-right: 1px solid var(--border-color);
     @media screen and (min-width: 600px) {
       max-height: 100vh;
       overflow-y: scroll;
@@ -166,6 +172,7 @@ export default {
   }
 
   .main {
+    max-width: 50rem;
     & > .content {
       flex: 1;
       display: flex;
@@ -181,6 +188,8 @@ export default {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    background: linear-gradient(145.74deg, #6b56b6 20.13%, #4c75bf 96.96%);
+    color: #fff;
 
     .about {
       max-width: 40rem;
@@ -188,39 +197,28 @@ export default {
       padding: 1rem;
 
       @media screen and (max-width: 600px) {
-        border-bottom: 1px solid #6b17e6;
+        border-bottom: 1px solid var(--border-color);
       }
     }
 
     .header {
-      background: linear-gradient(
-          to top left,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0) calc(50% - 0.8px),
-          #6b17e6 50%,
-          rgba(0, 0, 0, 0) calc(50% + 0.8px),
-          rgba(0, 0, 0, 0) 100%
-        ),
-        linear-gradient(
-          to top right,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0) calc(50% - 0.8px),
-          #6b17e6 50%,
-          rgba(0, 0, 0, 0) calc(50% + 0.8px),
-          rgba(0, 0, 0, 0) 100%
-        );
       width: 100%;
-      border-bottom: 1px solid #6b17e6;
+      border-bottom: 1px solid var(--border-color);
       font-weight: bolder;
       text-transform: uppercase;
       padding: 1rem;
-      flex: 1;
+      /* flex: 1; */
       justify-content: center;
       align-items: center;
       display: flex;
+            flex: 1;
 
-      .title {
-        background: white;
+      a {
+        display: inline;
+        line-height: 0;
+      }
+      img {
+        max-width: 258px;
       }
     }
 
@@ -230,19 +228,19 @@ export default {
       margin-bottom: auto;
 
       .field {
-        border-bottom: 1px solid #6b17e6;
+        border-bottom: 1px solid var(--border-color);
         display: flex;
         padding: 0;
 
         & > * {
           display: flex;
-          padding: 0.25em 1em;
+          padding: 0.1em 1em;
           justify-content: center;
           align-items: center;
         }
 
         .value {
-          border-left: 1px solid #6b17e6;
+          border-left: 1px solid var(--border-color);
           padding-left: 1em;
           margin-left: 1em;
         }
