@@ -175,7 +175,6 @@ export default {
   }
 
   .main {
-    max-width: 50rem;
     & > .content {
       flex: 1;
       display: flex;
