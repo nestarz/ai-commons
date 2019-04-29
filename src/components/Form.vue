@@ -117,8 +117,13 @@ export default {
     .slider {
       display: flex;
       border-top: 1px solid var(--border-color);
+      
+      input,
       :focus {
-        background: transparent;
+        &,
+        &:focus {
+          background: transparent;
+        }
       }
 
       .value {

@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <div class="side">
+    <div class="side" :class="{ active }">
       <div class="header">
         <g-link to="/" class="title">
           <g-image src="https://aicommons.com/wp-content/uploads/2019/02/AIC-logo-white-1@3x.png"/>
@@ -21,6 +21,7 @@
         <g-link to="http://www.aicommons.com">AI Commons</g-link>.
         <!-- Partager vos traLink to AI Commons -->
       </div>
+      <div class="start" v-if="!active" @click="active = true">Start</div>
     </div>
     <div class="main">
       <div class="content">
@@ -77,7 +78,8 @@ export default {
   },
   data() {
     return {
-      currentStep: 0
+      currentStep: 0,
+      active: false
     };
   },
   computed: {
@@ -158,6 +160,7 @@ export default {
 .index {
   min-height: 100%;
   display: grid;
+  overflow: hidden;
   @media screen and (min-width: 600px) {
     grid-template-columns: 0.4fr 0.6fr;
   }
@@ -190,15 +193,33 @@ export default {
     flex-direction: column;
     background: linear-gradient(145.74deg, #6b56b6 20.13%, #4c75bf 96.96%);
     color: #fff;
+    z-index: 2;
+    transition: all 2s ease;
+    width: 100vw;
+    overflow: hidden;
+
+    &.active {
+      width: 100%;
+    }
 
     .about {
-      max-width: 40rem;
+      max-width: 30rem;
       margin: 0;
       padding: 1rem;
 
       @media screen and (max-width: 600px) {
         border-bottom: 1px solid var(--border-color);
       }
+    }
+
+    .start {
+      padding: 0.5rem 2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(145.74deg, #4c75bf 20.13%, #6b56b6 96.96%);
+      box-shadow: 10px 5px 5px red;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
     }
 
     .header {
@@ -211,7 +232,6 @@ export default {
       justify-content: center;
       align-items: center;
       display: flex;
-            flex: 1;
 
       a {
         display: inline;
@@ -219,6 +239,7 @@ export default {
       }
       img {
         max-width: 258px;
+        user-select: none;
       }
     }
 
