@@ -6,7 +6,7 @@
           <g-image src="https://aicommons.com/wp-content/uploads/2019/02/AIC-logo-white-1@3x.png"/>
         </g-link>
       </div>
-      <div class="fields">
+      <div class="fields" v-if="actives.length">
         <div class="field" v-for="field in actives" :key="field.id">
           <div class="title">{{ field.title }}</div>
           <div
@@ -21,16 +21,16 @@
         <g-link to="http://www.aicommons.com">AI Commons</g-link>.
         <!-- Partager vos traLink to AI Commons -->
       </div>
-      <div class="start" v-if="!active" @click="active = true">Start</div>
+      <div class="button dark start" v-if="!active" @click="active = true">Start</div>
     </div>
     <div class="main">
       <div class="content">
         <final-license ref="license" :forms="forms" v-if="currentStep === forms.length"/>
         <commons-form :fields="form.options" :text="form.description" ref="form" v-else/>
         <div class="pager">
-          <div class="previous" @click="prev" v-if="currentStep !== 0">Previous</div>
-          <div class="next" @click="next" v-if="currentStep !== forms.length">Next</div>
-          <div class="save" @click="save" v-if="currentStep === forms.length">Save</div>
+          <div class="button previous" @click="prev" v-if="currentStep !== 0">Previous</div>
+          <div class="button next" @click="next" v-if="currentStep !== forms.length">Next</div>
+          <div class="button save" @click="save" v-if="currentStep === forms.length">Save</div>
         </div>
       </div>
     </div>
@@ -123,32 +123,72 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.button {
+  font-size: 14px;
+  line-height: 2.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  will-change: transform, opacity;
+  padding: 0 8px 0 8px;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 64px;
+  height: 36px;
+  border: none;
+  outline: none;
+  line-height: inherit;
+  user-select: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: 8px;
+  border-style: solid;
+  padding: 0 14px 0 14px;
+  border-width: 2px;
+  border-color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: #eee;
+  }
+  &.dark:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
 .pager {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   user-select: none;
-  margin-top: 2rem;
-  background-color: #111;
-  color: white;
+  margin-top: 0rem;
   font-weight: 900;
-  font-style: italic;
   font-size: 1rem;
+  padding: 1rem;
+  text-transform: capitalize;
 
-  .previous,
-  .next,
-  .save {
-    padding: 1em;
-    flex: 1;
-    text-align: center;
-    cursor: pointer;
-    &:hover {
-      background-color: #444;
+  .next {
+    margin-left: auto;
+    &:after {
+      content: "\2192";
+      font-size: 2rem;
+      margin-top: -0.8rem;
+      margin-left: 1rem;
     }
   }
   .previous {
-    border-right: 1px solid var(--border-color);
+    margin-right: auto;
+    &:before {
+      content: "\2190";
+      font-size: 2rem;
+      margin-top: -0.8rem;
+      margin-right: 1rem;
+    }
   }
 }
 
@@ -187,18 +227,18 @@ export default {
   }
 
   .side {
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     background: linear-gradient(145.74deg, #6b56b6 20.13%, #4c75bf 96.96%);
     color: #fff;
     z-index: 2;
     transition: all 2s ease;
-    width: 100vw;
+    min-width: 100vw;
     overflow: hidden;
 
     &.active {
-      width: 100%;
+      min-width: 100%;
     }
 
     .about {
@@ -214,8 +254,6 @@ export default {
     .start {
       padding: 0.5rem 2rem;
       margin-bottom: 1rem;
-      background: linear-gradient(145.74deg, #4c75bf 20.13%, #6b56b6 96.96%);
-      box-shadow: 10px 5px 5px red;
       color: #fff;
       cursor: pointer;
       user-select: none;
@@ -237,7 +275,8 @@ export default {
         line-height: 0;
       }
       img {
-        max-width: 258px;
+        max-width: 25rem;
+        width: 100%;
         user-select: none;
       }
     }
