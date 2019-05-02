@@ -18,16 +18,8 @@
               v-if="field.type.includes('slider')"
               @click="toggleSelect(field, true)"
             >
-              <div class="value">{{ field.value }}&nbsp;%</div>
-              <input
-                type="range"
-                v-model="field.value"
-                :name="field.id"
-                :min="field.min"
-                :max="field.max"
-                :step="field.step"
-                :style="'background-image: -webkit-gradient(linear, left top, right top, color-stop(' + (field.value - field.min) / (field.max - field.min) + ', #6b17e6), color-stop(' + (field.value - field.min) / (field.max - field.min) + ', #C5C5C5))'"
-              >
+              <div class="value">{{ field.value ? field.value : 0 }}&nbsp;%</div>
+              <range-slider />
             </div>
           </div>
         </div>

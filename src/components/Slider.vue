@@ -1,61 +1,95 @@
 <template>
-  <div class="v-range-slider">
-    <slot name="left"></slot>
-    <input type="range" v-model="value" :min="min" :max="max" :step="step" :name="name">
-    <slot name="right"></slot>
+  <div class="slider">
+    <div class="value">{{ value ? value : 0 }}&nbsp;%</div>
+    <input
+      type="range"
+      v-model="value"
+      :name="id"
+      :min="min"
+      :max="max"
+      :step="step"
+      :style="`
+      background-image: linear-gradient(
+        to right, 
+        #C5C5C5 ${normalizedValue * 100}%, 
+        #6b17e6 ${normalizedValue * 100}%,
+      );
+      `"
+    >
   </div>
 </template>
 
 <script>
 export default {
-  props: ["value", "name", "min", "max", "step"]
+  props: ["value", "name", "min", "max", "step"],
+  computed: {
+    normalizedValue() {
+      return (this.value - this.min) / (this.max - this.min);
+    }
+  },
 };
 </script>
   
 <style lang="scss" scoped>
-.v-range-slider {
-  display: flex;
-  align-items: center;
-  padding: 2px 11px;
-}
-.v-range-slider input[type="range"] {
-  -webkit-appearance: none;
-  flex: 1;
-  display: block;
-  overflow: hidden;
-  margin: 5px 10px;
-  padding: 16px 1px 20px;
-  box-sizing: border-box;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
-.v-range-slider input::-webkit-slider-runnable-track {
-  position: relative;
-  height: 2px;
-  background: #ddd;
-  border: none;
-  border-radius: 3px;
-}
-.v-range-slider input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  position: relative;
-  margin-top: -12px;
-  cursor: pointer;
-  width: 28px;
-  height: 28px;
-  border: 0;
-  border-radius: 50%;
-  background: white;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
-}
-.v-range-slider input::-webkit-slider-thumb:before {
-  position: absolute;
-  display: inline-block;
-  content: "";
-  top: 12px;
-  left: -2001px;
-  width: 2000px;
-  height: 2px;
-  background: var(--vui-green);
+.slider {
+  input[type=range] {
+    appearance: none;
+    width: 100%;
+    margin: 5px 0;
+    height: 2px;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    border-radius: 0px;
+    border: 0px solid #010101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    border: 0.6px solid #7702ff;
+    height: 11px;
+    width: 11px;
+    border-radius: 50px;
+    background: #7702ff;
+    cursor: pointer;
+    appearance: none;
+    margin-top: -5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    border: 0.6px solid #7702ff;
+    height: 11px;
+    width: 11px;
+    border-radius: 50px;
+    background: #7702ff;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-thumb {
+    border: 0.6px solid #7702ff;
+    height: 11px;
+    width: 11px;
+    border-radius: 50px;
+    background: #7702ff;
+    cursor: pointer;
+    height: 1px;
+  }
 }
 </style>
