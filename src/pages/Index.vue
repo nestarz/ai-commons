@@ -6,6 +6,12 @@
           <g-image src="https://aicommons.com/wp-content/uploads/2019/02/AIC-logo-white-1@3x.png"/>
         </g-link>
       </div>
+      <div class="about">
+        This chooser helps you to specify the conditions under which you want to share your work
+        If you are new, please read more about
+        <g-link to="http://www.aicommons.com">AI Commons</g-link>.
+        <!-- Partager vos traLink to AI Commons -->
+      </div>
       <div class="fields" v-if="actives.length">
         <div class="field" v-for="field in actives" :key="field.id">
           <div class="title">{{ field.title }}</div>
@@ -14,12 +20,6 @@
             v-if="field.value"
           >{{ field.value }}&nbsp;{{ field.type === 'checkbox-slider' ? '%' : ''}}</div>
         </div>
-      </div>
-      <div class="about">
-        This chooser helps you to specify the conditions under which you want to share your work
-        If you are new, please read more about
-        <g-link to="http://www.aicommons.com">AI Commons</g-link>.
-        <!-- Partager vos traLink to AI Commons -->
       </div>
       <div class="button dark start" v-if="!active" @click="active = true">Start</div>
     </div>
@@ -52,6 +52,7 @@ query allForms {
           description
           code
           type
+          value
           min
           max
           step
@@ -90,7 +91,7 @@ export default {
           field =>
             (["checkbox", "checkbox-slider"].includes(field.type) &&
               field.check === true) ||
-            field.value
+            !["checkbox", "checkbox-slider"].includes(field.type) && field.value
         );
     },
     forms() {
@@ -284,10 +285,14 @@ export default {
     .fields {
       justify-self: flex-start;
       align-self: stretch;
-      margin-bottom: auto;
+      margin-top: auto;
+      margin-bottom: 1rem;
 
       .field {
-        border-bottom: 1px solid var(--border-color);
+        border-top: 0px solid #fff;
+        &:first-child {
+          border: none;
+        }
         display: flex;
         padding: 0;
 

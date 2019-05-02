@@ -68,6 +68,7 @@ options:
   - id: benefits
     title: Usages Commerciaux autorisés avec partage des bénéfices à définir entre le Contributeur et l’Utilisateur
     type: checkbox-slider
+    value: 50
     min: 0
     max: 100
     step: 5

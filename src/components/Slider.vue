@@ -3,18 +3,14 @@
     <div class="value">{{ value ? value : 0 }}&nbsp;%</div>
     <input
       type="range"
-      v-model="value"
+      @input="$emit('input', $event.target.value)"
       :name="id"
       :min="min"
       :max="max"
       :step="step"
-      :style="`
-      background-image: linear-gradient(
-        to right, 
-        #C5C5C5 ${normalizedValue * 100}%, 
-        #6b17e6 ${normalizedValue * 100}%,
-      );
-      `"
+      :value="value"
+      :style="`background-image: linear-gradient(to right, rgb(107, 23, 230) ${
+        normalizedValue}%, rgb(197, 197, 197) ${normalizedValue}%);`"
     >
   </div>
 </template>
@@ -24,31 +20,50 @@ export default {
   props: ["value", "name", "min", "max", "step"],
   computed: {
     normalizedValue() {
-      return (this.value - this.min) / (this.max - this.min);
+      return ((this.value - this.min) / (this.max - this.min)) * 100;
     }
-  },
+  }
 };
 </script>
   
 <style lang="scss" scoped>
 .slider {
-  input[type=range] {
+  display: flex;
+  border-top: 1px solid var(--border-color);
+
+  input,
+  :focus {
+    &,
+    &:focus {
+      background: transparent;
+    }
+  }
+
+  .value {
+    padding: 0.25rem 1rem;
+    margin: 0.5rem 1rem;
+    margin-left: 0;
+    font-weight: 700;
+    background-color: #eee;
+  }
+
+  input[type="range"] {
     appearance: none;
     width: 100%;
     margin: 5px 0;
     height: 2px;
   }
-  input[type=range]:focus {
+  input[type="range"]:focus {
     outline: none;
   }
-  input[type=range]::-webkit-slider-runnable-track {
+  input[type="range"]::-webkit-slider-runnable-track {
     width: 100%;
     height: 1px;
     cursor: pointer;
     border-radius: 0px;
     border: 0px solid #010101;
   }
-  input[type=range]::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
     border: 0.6px solid #7702ff;
     height: 11px;
     width: 11px;
@@ -58,15 +73,15 @@ export default {
     appearance: none;
     margin-top: -5px;
   }
-  input[type=range]:focus::-webkit-slider-runnable-track {
+  input[type="range"]:focus::-webkit-slider-runnable-track {
     outline: none;
   }
-  input[type=range]::-moz-range-track {
+  input[type="range"]::-moz-range-track {
     width: 100%;
     height: 1px;
     cursor: pointer;
   }
-  input[type=range]::-moz-range-thumb {
+  input[type="range"]::-moz-range-thumb {
     border: 0.6px solid #7702ff;
     height: 11px;
     width: 11px;
@@ -74,7 +89,7 @@ export default {
     background: #7702ff;
     cursor: pointer;
   }
-  input[type=range]::-ms-track {
+  input[type="range"]::-ms-track {
     width: 100%;
     height: 1px;
     cursor: pointer;
@@ -82,7 +97,7 @@ export default {
     border-color: transparent;
     color: transparent;
   }
-  input[type=range]::-ms-thumb {
+  input[type="range"]::-ms-thumb {
     border: 0.6px solid #7702ff;
     height: 11px;
     width: 11px;

@@ -13,14 +13,15 @@
           <div class="icon"></div>
           <div>
             <div class="description">{{ field.description }}</div>
-            <div
-              class="slider"
+            <range-slider
+              :name="field.id"
+              :min="field.min"
+              :max="field.max"
+              :step="field.step"
+              v-model="field.value"
               v-if="field.type.includes('slider')"
               @click="toggleSelect(field, true)"
-            >
-              <div class="value">{{ field.value ? field.value : 0 }}&nbsp;%</div>
-              <range-slider />
-            </div>
+            />
           </div>
         </div>
         <div>
@@ -167,25 +168,6 @@ export default {
         display: grid;
         grid-template-columns: 40px 1fr;
         grid-gap: 0 2rem;
-
-        .slider {
-          display: flex;
-          border-top: 1px solid var(--border-color);
-
-          input,
-          :focus {
-            &,
-            &:focus {
-              background: transparent;
-            }
-          }
-
-          .value {
-            padding: 1rem;
-            padding-left: 0;
-            border-right: 1px solid var(--border-color);
-          }
-        }
 
         .toggle {
           position: relative;
