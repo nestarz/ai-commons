@@ -5,7 +5,7 @@ import '~/assets/style/index.scss'
 import DefaultLayout from '~/layouts/Default.vue'
 
 import Vuex from 'vuex'
-
+import { Button, Select, Slider, Switch, Progress, Steps, Step } from 'element-ui';
 
 const langs = {
   "fr": {
@@ -21,6 +21,13 @@ const langs = {
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.use(Vuex);
+  Vue.component(Steps.name, Steps);
+  Vue.component(Step.name, Step);
+  Vue.component(Progress.name, Progress);
+  Vue.component(Switch.name, Switch);
+  Vue.component(Button.name, Button);
+  Vue.component(Select.name, Select);
+  Vue.component(Slider.name, Slider);
   
   appOptions.store = new Vuex.Store({
     state: {

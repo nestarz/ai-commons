@@ -6,13 +6,24 @@
           <g-image src="https://aicommons.com/wp-content/uploads/2019/02/AIC-logo-white-1@3x.png"/>
         </g-link>
       </div>
-      <div class="about">
-        This chooser helps you to specify the conditions under which you want to share your work
-        If you are new, please read more about
-        <g-link to="http://www.aicommons.com">AI Commons</g-link>.
-        <!-- Partager vos traLink to AI Commons -->
+      <div class="intro">
+        <div class="about">
+          This chooser helps you to specify the conditions under which you want to share your work
+          If you are new, please read more about
+          <g-link to="http://www.aicommons.com">AI Commons</g-link>.
+          <!-- Partager vos traLink to AI Commons -->
+        </div>
+        <el-button
+          class="start"
+          round
+          type="primary"
+          icon="el-icon-plus"
+          v-if="!active"
+          @click="active = true"
+        >Start</el-button>
       </div>
       <div class="fields" v-if="actives.length">
+        <div class="title">Contenu de la Licence</div>
         <div class="field" v-for="field in actives" :key="field.id">
           <div class="title">{{ field.title }}</div>
           <div
@@ -21,17 +32,34 @@
           >{{ field.value }}&nbsp;{{ field.type === 'checkbox-slider' ? '%' : ''}}</div>
         </div>
       </div>
-      <div class="button dark start" v-if="!active" @click="active = true">Start</div>
     </div>
     <div class="main">
       <div class="content">
+        <el-steps class="steps" :active="currentStep" finish-status="success">
+          <el-step></el-step>
+          <el-step></el-step>
+          <el-step></el-step>
+        </el-steps>
         <final-license ref="license" :forms="forms" v-if="currentStep === forms.length"/>
         <commons-form :fields="form.options" :text="form.description" ref="form" v-else/>
         <div class="pager">
-          <div class="button previous" @click="prev" v-if="currentStep !== 0">Previous</div>
-          <div class="button next" @click="next" v-if="currentStep !== forms.length">Next</div>
-          <div class="button save" @click="save" v-if="currentStep === forms.length">Save</div>
+          <el-button round icon="el-icon-arrow-left" @click="prev" v-if="currentStep !== 0">Previous</el-button>
+          <el-button round @click="next" v-if="currentStep !== forms.length">
+            Next
+            <i class="el-icon-arrow-right"></i>
+          </el-button>
+          <el-button
+            round
+            icon="el-icon-delete"
+            @click="save"
+            v-if="currentStep === forms.length"
+          >Save</el-button>
         </div>
+        <el-progress
+          style="margin: 0"
+          :show-text="false"
+          :percentage="currentStep/forms.length*100"
+        ></el-progress>
       </div>
     </div>
   </div>
@@ -91,7 +119,8 @@ export default {
           field =>
             (["checkbox", "checkbox-slider"].includes(field.type) &&
               field.check === true) ||
-            !["checkbox", "checkbox-slider"].includes(field.type) && field.value
+            (!["checkbox", "checkbox-slider"].includes(field.type) &&
+              field.value)
         );
     },
     forms() {
@@ -126,33 +155,24 @@ export default {
 <style lang="scss" scoped>
 .button {
   font-size: 14px;
-  line-height: 2.25rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  text-transform: uppercase;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  will-change: transform, opacity;
-  padding: 0 8px 0 8px;
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  min-width: 64px;
-  height: 36px;
-  border: none;
-  outline: none;
-  line-height: inherit;
-  user-select: none;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
   -webkit-appearance: none;
-  overflow: hidden;
-  vertical-align: middle;
-  border-radius: 8px;
-  border-style: solid;
-  padding: 0 14px 0 14px;
-  border-width: 2px;
-  border-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 12px 23px;
+  text-transform: uppercase;
+
   cursor: pointer;
   &:hover {
     background-color: #eee;
@@ -171,25 +191,17 @@ export default {
   font-weight: 900;
   font-size: 1rem;
   padding: 1rem;
+  margin-top: auto;
   text-transform: capitalize;
 
-  .next {
-    margin-left: auto;
-    &:after {
-      content: "\2192";
-      font-size: 2rem;
-      margin-top: -0.8rem;
-      margin-left: 1rem;
-    }
+  button {
+    color: #6040ff;
+    background: #f6ecff;
+    border-color: #c6b3ff;
   }
-  .previous {
-    margin-right: auto;
-    &:before {
-      content: "\2190";
-      font-size: 2rem;
-      margin-top: -0.8rem;
-      margin-right: 1rem;
-    }
+
+  & > :last-child {
+    margin-left: auto;
   }
 }
 
@@ -221,6 +233,19 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      /deep/ .el-progress-bar__outer,
+      /deep/ .el-progress-bar__inner {
+        border-radius: 0;
+      }
+
+      .steps {
+        margin: 2rem 2rem 1rem 2rem;
+
+        @media screen and (min-width: 600px) {
+          margin: 1rem 2rem;
+        }
+      }
     }
     .final {
       padding: 1em;
@@ -229,7 +254,7 @@ export default {
 
   .side {
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     background: linear-gradient(145.74deg, #6b56b6 20.13%, #4c75bf 96.96%);
     color: #fff;
@@ -237,38 +262,39 @@ export default {
     transition: all 2s ease;
     min-width: 100vw;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 6px;
+    padding-top: 2rem;
+
+    /*box-shadow: 1px 1px 20px 0px #777777;*/
 
     &.active {
       min-width: 100%;
     }
 
-    .about {
-      max-width: 30rem;
-      margin: 0;
-      padding: 1rem;
+    .intro {
+      .about {
+        max-width: 30rem;
+        margin: 0;
+        padding: 2rem;
 
-      @media screen and (max-width: 600px) {
-        border-bottom: 1px solid var(--border-color);
+        @media screen and (max-width: 600px) {
+          border-bottom: 1px solid var(--border-color);
+        }
+      }
+
+      .start {
+        margin: 0 2rem;
       }
     }
-
-    .start {
-      padding: 0.5rem 2rem;
-      margin-bottom: 1rem;
-      color: #fff;
-      cursor: pointer;
-      user-select: none;
-    }
-
     .header {
       width: 100%;
       border-bottom: 1px solid var(--border-color);
       font-weight: bolder;
       text-transform: uppercase;
-      padding: 1rem;
+      padding: 0 2rem;
       /* flex: 1; */
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
       display: flex;
 
       a {
@@ -276,7 +302,7 @@ export default {
         line-height: 0;
       }
       img {
-        max-width: 25rem;
+        max-width: 12rem;
         width: 100%;
         user-select: none;
       }
@@ -286,7 +312,15 @@ export default {
       justify-self: flex-start;
       align-self: stretch;
       margin-top: auto;
-      margin-bottom: 1rem;
+      padding: 2rem 0;
+      background: rgba(255, 255, 255, 0.1);
+
+      & > .title {
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        font-size: 120%;
+      }
 
       .field {
         border-top: 0px solid #fff;
@@ -298,7 +332,7 @@ export default {
 
         & > * {
           display: flex;
-          padding: 0.1em 1em;
+          padding: 0.1rem 2rem;
           justify-content: center;
           align-items: center;
         }

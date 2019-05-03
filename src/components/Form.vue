@@ -4,24 +4,26 @@
     <div class="fields">
       <div class="field" v-for="field in fields" :key="field.id" @click="toggleSelect(field)">
         <div class="checkbox" v-if="field.type.includes('checkbox')">
-          <div class="slider">
-            <div class="toggle" :class="{active: field.check}">
-              <span class="circle"></span>
-            </div>
+          <div class="switch">
+            <el-switch v-model="field.check"></el-switch>
           </div>
           <div class="title">{{ field.title }}</div>
           <div class="icon"></div>
           <div>
             <div class="description">{{ field.description }}</div>
-            <range-slider
+            <div @click.stop="(event) => event.stopPropagation()">
+            <el-slider
+              v-if="field.type.includes('slider')"
+              class="slider"
               :name="field.id"
               :min="field.min"
               :max="field.max"
               :step="field.step"
               v-model="field.value"
-              v-if="field.type.includes('slider')"
-              @click="toggleSelect(field, true)"
-            />
+              show-input
+              :disabled="!field.check"
+            ></el-slider>
+            </div>
           </div>
         </div>
         <div>
@@ -69,6 +71,7 @@ export default {
 <style lang="scss" scoped>
 .form {
   .text {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
     padding: 1rem 2rem;
     border-bottom: 1px solid #eee;
   }
@@ -108,6 +111,12 @@ export default {
       .description {
         font-size: 80%;
         display: block;
+      }
+
+      .switch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .code {
@@ -237,30 +246,8 @@ export default {
         }
 
         .slider {
-          content: "";
-          border-right: 1px solid var(--border-color);
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-
-          &.active {
-            background: linear-gradient(
-                to top left,
-                rgba(0, 0, 0, 0) 0%,
-                rgba(0, 0, 0, 0) calc(50% - 0.8px),
-                var(--border-color) 50%,
-                rgba(0, 0, 0, 0) calc(50% + 0.8px),
-                rgba(0, 0, 0, 0) 100%
-              ),
-              linear-gradient(
-                to top right,
-                rgba(0, 0, 0, 0) 0%,
-                rgba(0, 0, 0, 0) calc(50% - 0.8px),
-                var(--border-color) 50%,
-                rgba(0, 0, 0, 0) calc(50% + 0.8px),
-                rgba(0, 0, 0, 0) 100%
-              );
-          }
+          width: 100%;
+          margin-top: 1rem;
         }
       }
     }

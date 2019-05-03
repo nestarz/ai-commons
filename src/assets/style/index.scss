@@ -7,3 +7,11 @@
 @import "code";
 @import "content-box";
 @import "utils";
+
+/* couleur du thème */
+$--color-primary: #8978c5;
+
+/* chemin vers le fichier de police, requis */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";

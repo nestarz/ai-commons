@@ -87,7 +87,10 @@ export default {
 
 <style lang="scss" scoped>
 .license {
-  padding: 0.75rem 2rem;
+  margin-top: 0.5rem;
+  padding: 1rem 2rem;
+  border-top: 1px solid #eee;
+
   ul {
     margin: 0;
     padding: 0;
