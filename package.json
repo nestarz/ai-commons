@@ -15,7 +15,6 @@
     "fs-extra": "^7.0.1",
     "globby": "^9.2.0",
     "gridsome": "^0.5.7",
-    "htmlelement.polyfills": "^2.0.2",
     "js-yaml": "^3.13.1",
     "node-fetch": "^2.3.0",
     "page-metadata-parser": "^1.1.3",
