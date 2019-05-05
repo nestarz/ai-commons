@@ -5,7 +5,24 @@ import '~/assets/style/index.scss'
 import DefaultLayout from '~/layouts/Default.vue'
 
 import Vuex from 'vuex'
-import { Button, Select, Slider, Switch, Progress, Steps, Step } from 'element-ui';
+
+let faker;
+
+if (process.isClient || process.client) {
+  faker = require('element-ui');
+} else {
+  console.log(process.isClient || process.client);
+  faker = {
+    Button: DefaultLayout,
+    Select: DefaultLayout,
+    Slider: DefaultLayout,
+    Switch: DefaultLayout,
+    Progress: DefaultLayout,
+    Steps: DefaultLayout,
+    Step: DefaultLayout,
+  }
+}
+const { Button, Select, Slider, Switch, Progress, Steps, Step } = faker;
 
 const langs = {
   "fr": {
