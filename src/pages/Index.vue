@@ -1,16 +1,19 @@
 <template>
   <div class="index">
-    <div class="side" :class="{ active }">
+    <div class="side" :class="{ active, top: actives.length }">
       <div class="header">
         <g-link to="/" class="title">
           <g-image src="https://aicommons.com/wp-content/uploads/2019/02/AIC-logo-white-1@3x.png"/>
         </g-link>
       </div>
-      <div class="intro">
+      <div class="intro" v-if="actives.length < 6">
         <div class="about">
           This chooser helps you to specify the conditions under which you want to share your work
           If you are new, please read more about
-          <a href="http://www.aicommons.com" alt="aicommons">AI Commons</a>.
+          <a
+            href="http://www.aicommons.com"
+            alt="aicommons"
+          >AI Commons</a>.
           <!-- Partager vos traLink to AI Commons -->
         </div>
         <el-button
@@ -210,7 +213,7 @@ export default {
 }
 
 .only-desktop {
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1050px) {
     display: none;
   }
 }
@@ -218,14 +221,14 @@ export default {
   min-height: 100%;
   display: grid;
   overflow: hidden;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 1050px) {
     grid-template-columns: 0.4fr 0.6fr;
   }
   .side,
   .main {
     display: flex;
     border-right: 1px solid var(--border-color);
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 1050px) {
       max-height: 100vh;
       overflow-y: scroll;
     }
@@ -246,7 +249,7 @@ export default {
       .steps {
         margin: 2rem 2rem 1rem 2rem;
 
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 1050px) {
           margin: 1rem 2rem;
         }
       }
@@ -266,6 +269,7 @@ export default {
     transition: all 2s ease;
     min-width: 100vw;
     overflow: hidden;
+    overflow-y: scroll;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 6px;
     padding-top: 2rem;
 
@@ -275,13 +279,18 @@ export default {
       min-width: 100%;
     }
 
+    &.active.top {
+      justify-content: flex-start;
+    }
+
     .intro {
       .about {
         max-width: 30rem;
         margin: 0;
         padding: 2rem;
+        padding-top: 0rem;
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 1050px) {
           border-bottom: 1px solid var(--border-color);
         }
       }
@@ -296,6 +305,7 @@ export default {
       font-weight: bolder;
       text-transform: uppercase;
       padding: 0 2rem;
+      margin-bottom: 2rem;
       /* flex: 1; */
       justify-content: flex-start;
       align-items: flex-start;
@@ -327,17 +337,17 @@ export default {
       }
 
       .field {
-        border-top: 0px solid #fff;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         &:first-child {
           border: none;
         }
         display: flex;
-        padding: 0;
+        padding: 0.25rem 2rem;
 
-        & > * {
+        .title {
           flex: 1;
           display: flex;
-          padding: 0.1rem 2rem;
+          padding: 0.1rem 0rem;
           align-items: center;
 
           font-weight: 600;
@@ -345,18 +355,22 @@ export default {
           align-items: center;
 
           .icon {
+            &:not(:empty) {
               flex: 0 0 1.2em;
               height: 1.2rem;
               margin-right: 0.75rem;
-            
+            }
           }
         }
 
         .value {
           border-left: 1px solid var(--border-color);
-          padding-left: 1em;
-          margin-left: 1em;
-          flex: 0;
+          margin: 0;
+          padding: 0;
+          margin-left: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }
