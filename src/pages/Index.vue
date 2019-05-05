@@ -10,7 +10,7 @@
         <div class="about">
           This chooser helps you to specify the conditions under which you want to share your work
           If you are new, please read more about
-          <g-link to="http://www.aicommons.com">AI Commons</g-link>.
+          <a href="http://www.aicommons.com" alt="aicommons">AI Commons</a>.
           <!-- Partager vos traLink to AI Commons -->
         </div>
         <el-button
@@ -27,7 +27,7 @@
         <div class="field" v-for="field in actives" :key="field.id">
           <div class="title">
             <div v-html="field.icon" class="icon"></div>
-            {{ field.title }}
+            <div class="title--content">{{ field.title }}</div>
           </div>
           <div
             class="value"
@@ -335,9 +335,9 @@ export default {
         padding: 0;
 
         & > * {
+          flex: 1;
           display: flex;
           padding: 0.1rem 2rem;
-          justify-content: center;
           align-items: center;
 
           font-weight: 600;
@@ -345,11 +345,10 @@ export default {
           align-items: center;
 
           .icon {
-            &:not(:empty) {
-              width: 1.2rem;
+              flex: 0 0 1.2em;
               height: 1.2rem;
               margin-right: 0.75rem;
-            }
+            
           }
         }
 
@@ -357,6 +356,7 @@ export default {
           border-left: 1px solid var(--border-color);
           padding-left: 1em;
           margin-left: 1em;
+          flex: 0;
         }
       }
     }

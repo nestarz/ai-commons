@@ -9,7 +9,7 @@
           </div>
           <div class="title">
             <div v-html="field.icon" class="icon"></div>
-            {{ field.title }}
+            <div class="title--content">{{ field.title }}</div>
           </div>
           <div class="icon"></div>
           <div>
@@ -116,7 +116,7 @@ export default {
 
         .icon {
           &:not(:empty) {
-            width: 1.2rem;
+            flex: 0 0 1.2em;
             height: 1.2rem;
             margin-right: 0.75rem;
           }
