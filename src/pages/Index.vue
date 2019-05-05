@@ -1,12 +1,12 @@
 <template>
   <div class="index">
     <div class="side" :class="{ active, top: actives.length }">
-      <div class="header">
-        <g-link to="/" class="title">
+      <div class="header" @click="currentStep = 0">
+        <div class="title">
           <g-image src="https://aicommons.com/wp-content/uploads/2019/02/AIC-logo-white-1@3x.png"/>
-        </g-link>
+        </div>
       </div>
-      <div class="intro" v-if="actives.length < 6">
+      <div class="intro">
         <div class="about">
           This chooser helps you to specify the conditions under which you want to share your work
           If you are new, please read more about
@@ -305,13 +305,14 @@ export default {
       font-weight: bolder;
       text-transform: uppercase;
       padding: 0 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       /* flex: 1; */
       justify-content: flex-start;
       align-items: flex-start;
       display: flex;
+      cursor: pointer;
 
-      a {
+      .title {
         display: inline;
         line-height: 0;
       }
