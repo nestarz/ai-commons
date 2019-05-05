@@ -7,22 +7,25 @@
           <div class="switch">
             <el-switch v-model="field.check"></el-switch>
           </div>
-          <div class="title">{{ field.title }}</div>
+          <div class="title">
+            <div v-html="field.icon" class="icon"></div>
+            {{ field.title }}
+          </div>
           <div class="icon"></div>
           <div>
             <div class="description">{{ field.description }}</div>
             <div @click.stop="(event) => event.stopPropagation()">
-            <el-slider
-              v-if="field.type.includes('slider')"
-              class="slider"
-              :name="field.id"
-              :min="field.min"
-              :max="field.max"
-              :step="field.step"
-              v-model="field.value"
-              show-input
-              :disabled="!field.check"
-            ></el-slider>
+              <el-slider
+                v-if="field.type.includes('slider')"
+                class="slider"
+                :name="field.id"
+                :min="field.min"
+                :max="field.max"
+                :step="field.step"
+                v-model="field.value"
+                show-input
+                :disabled="!field.check"
+              ></el-slider>
             </div>
           </div>
         </div>
@@ -71,7 +74,8 @@ export default {
 <style lang="scss" scoped>
 .form {
   .text {
-    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+      "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     padding: 1rem 2rem;
     border-bottom: 1px solid #eee;
   }
@@ -107,6 +111,16 @@ export default {
 
       .title {
         font-weight: 600;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          &:not(:empty) {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-right: 0.75rem;
+          }
+        }
       }
       .description {
         font-size: 80%;

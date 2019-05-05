@@ -25,7 +25,10 @@
       <div class="fields" v-if="actives.length">
         <div class="title">Contenu de la Licence</div>
         <div class="field" v-for="field in actives" :key="field.id">
-          <div class="title">{{ field.title }}</div>
+          <div class="title">
+            <div v-html="field.icon" class="icon"></div>
+            {{ field.title }}
+          </div>
           <div
             class="value"
             v-if="field.value"
@@ -77,6 +80,7 @@ query allForms {
         options {
           id
           title
+          icon
           description
           code
           type
@@ -335,6 +339,18 @@ export default {
           padding: 0.1rem 2rem;
           justify-content: center;
           align-items: center;
+
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+
+          .icon {
+            &:not(:empty) {
+              width: 1.2rem;
+              height: 1.2rem;
+              margin-right: 0.75rem;
+            }
+          }
         }
 
         .value {
