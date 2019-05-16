@@ -63,7 +63,6 @@ query allPreambules {
 
 <script>
 import VueMarkdown from "vue-markdown-v2";
-import { Printd } from "printd";
 
 export default {
   props: ["forms", "actives"],
@@ -72,7 +71,6 @@ export default {
       benefits: 0,
       contributor_name: "Unknown",
       pdfuri: null,
-      printd: new Printd()
     };
   },
   computed: {
@@ -108,7 +106,9 @@ export default {
   mounted() {},
   methods: {
     print() {
-      this.printd.print(this.$refs.license, [
+      const Printd = require('printd');
+      const printd = new Printd.Printd();
+      printd.print(this.$refs.license, [
         "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css",
         `
         body  
