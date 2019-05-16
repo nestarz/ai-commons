@@ -47,12 +47,6 @@
             Next
             <i class="el-icon-arrow-right"></i>
           </el-button>
-          <el-button
-            round
-            icon="el-icon-delete"
-            @click="save"
-            v-if="currentStep === forms.length"
-          >Save</el-button>
         </div>
         <el-progress
           style="margin: 0"
@@ -96,7 +90,6 @@ query allForms {
 import CommonsForm from "../components/Form.vue";
 import FinalLicense from "../components/License.vue";
 import SuperSummary from "../components/Summary.vue";
-import FileSaver from "file-saver";
 
 export default {
   metaInfo: {
@@ -144,12 +137,6 @@ export default {
     prev() {
       this.currentStep = Math.max(0, this.currentStep - 1);
     },
-    save() {
-      var blob = new Blob([this.$refs.license.getMarkdown()], {
-        type: "text/plain;charset=utf-8"
-      });
-      FileSaver.saveAs(blob, "LICENSE");
-    }
   }
 };
 </script>
