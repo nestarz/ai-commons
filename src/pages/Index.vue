@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <div class="side" :class="{ active, top: actives.length }">
+    <div class="side" :class="{ active, top: actives.flat().length }">
       <div class="header" @click="currentStep = 0">
         <div class="title">
           <g-image src="./AIC-logo-white.png"/>
@@ -25,19 +25,7 @@
           @click="active = true"
         >Start</el-button>
       </div>
-      <div class="fields" v-if="actives.length">
-        <div class="title">Summary</div>
-        <div class="field" v-for="field in actives" :key="field.id">
-          <div class="title">
-            <div v-html="field.icon" class="icon"></div>
-            <div class="title--content">{{ field.title }}</div>
-          </div>
-          <div
-            class="value"
-            v-if="field.value"
-          >{{ field.value }}&nbsp;{{ field.type === 'checkbox-slider' ? '%' : ''}}</div>
-        </div>
-      </div>
+      <super-summary :forms="forms"/>
     </div>
     <div class="main" @click="active = true">
       <div class="content">
@@ -46,7 +34,12 @@
           <el-step></el-step>
           <el-step></el-step>
         </el-steps>
-        <final-license ref="license" :forms="forms" :actives="actives" v-if="currentStep === forms.length"/>
+        <final-license
+          ref="license"
+          :forms="forms"
+          :actives="actives"
+          v-if="currentStep === forms.length"
+        />
         <commons-form :fields="form.options" :text="form.description" ref="form" v-else/>
         <div class="pager">
           <el-button round icon="el-icon-arrow-left" @click="prev" v-if="currentStep !== 0">Previous</el-button>
@@ -102,6 +95,7 @@ query allForms {
 <script>
 import CommonsForm from "../components/Form.vue";
 import FinalLicense from "../components/License.vue";
+import SuperSummary from "../components/Summary.vue";
 import FileSaver from "file-saver";
 
 export default {
@@ -110,7 +104,8 @@ export default {
   },
   components: {
     CommonsForm,
-    FinalLicense
+    FinalLicense,
+    SuperSummary
   },
   data() {
     return {
@@ -120,15 +115,15 @@ export default {
   },
   computed: {
     actives() {
-      return this.forms
-        .flatMap(form => form.options)
-        .filter(
+      return this.forms.map(form =>
+        form.options.filter(
           field =>
             (["checkbox", "checkbox-slider"].includes(field.type) &&
               field.check === true) ||
             (!["checkbox", "checkbox-slider"].includes(field.type) &&
               field.value)
-        );
+        )
+      );
     },
     forms() {
       return this.$page.allForms.edges.map(edge => edge.node);
@@ -240,6 +235,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      height: 100%;
 
       /deep/ .el-progress-bar__outer,
       /deep/ .el-progress-bar__inner {

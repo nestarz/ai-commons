@@ -61,3 +61,56 @@ button {
   }
 }
 
+
+.summary {
+  justify-self: flex-start;
+  align-self: stretch;
+  margin-top: auto;
+  padding: 2rem 0;
+  background: rgba(255, 255, 255, 0.1);
+
+  & > .title {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 120%;
+  }
+
+  .field {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    &:first-child {
+      border: none;
+    }
+    display: flex;
+    padding: 0.25rem 2rem;
+
+    .title {
+      flex: 1;
+      display: flex;
+      padding: 0.1rem 0rem;
+      align-items: center;
+
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        &:not(:empty) {
+          flex: 0 0 1.2em;
+          height: 1.2rem;
+          margin-right: 0.75rem;
+        }
+      }
+    }
+
+    .value {
+      border-left: 1px solid var(--border-color);
+      margin: 0;
+      padding: 0;
+      margin-left: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

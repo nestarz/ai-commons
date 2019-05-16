@@ -6,7 +6,7 @@ module.exports = function(api) {
   api.loadSource(async store => {
     const forms = store.addContentType({
       typeName: "Forms",
-      route: "/forms/:slug"
+      route: "/forms/:id"
     });
     (await glob("content/forms/**/*.yml")).map(file => {
       const form = jsYaml.load(fs.readFileSync(file, "utf8"));

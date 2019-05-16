@@ -1,29 +1,41 @@
 <template>
   <div class="license">
-    <el-button class="showPdf" round @click="showPdf = !showPdf">
-      Show as
-      <span v-if="showPdf">HTML</span>
-      <span v-else>PDF</span>
+    <el-button class="showPdf" round @click="print">
+      Print PDF
     </el-button>
-    <div class="pdf-viewer" v-if="showPdf">
-      <object :data="pdfuri" type="application/pdf" v-if="pdfuri">
-        <iframe :src="`https://docs.google.com/viewer?url=${pdfuri}&embedded=true`"></iframe>
-      </object>
-    </div>
-    <div ref="license" class="content" v-show="!showPdf">
-      <div class="body">
+    <div ref="license" class="content">
+      <div class="body markdown-body">
         <div class="header">
           <img src="./AIC-logo-black.png">
-          <h2>Summary</h2>
-          <ol v-if="actives.length">
-            <li v-for="field in actives" :key="field.id">
-              <span v-html="field.icon"></span>
-              {{ field.title }}
-              <template
-                v-if="field.value"
-              >: {{ field.value }}&nbsp;{{ field.type === 'checkbox-slider' ? '%' : ''}}</template>
-            </li>
-          </ol>
+          <div class="summary" v-if="actives.flat().length">
+            <div class="title">Summary</div>
+            <div class="disclamer">
+              <em>
+                Disclaimer: this summary does not relieve the User from reading the
+                terms of the License, including the User License and the Specific Terms.
+              </em>
+            </div>
+            <div class="form" v-for="(form, index) in actives" :key="'i-form-' + index">
+              <div
+                class="preambule"
+                v-if="index === 0"
+              >The Licensed Common is of the following nature(s):</div>
+              <div
+                class="preambule"
+                v-if="index === 1"
+              >The Contributor grants the User the personal, free, non-transferable, non-sublicensable and non-exclusive right to use, for the entire World and irrevocably, the Licensed Common for the duration of the copyrights rights. The User has the right to reproduce and share the Licensed Common, as well as the right to produce, reproduce and share Derivative works (except if the option "Prohibition of Derivative Works" has been selected in the Specific Terms). The applicable Specific Attributions are as follows:</div>
+              <div class="field" v-for="field in form" :key="field.id">
+                <div class="title">
+                  <div v-html="field.icon" class="icon"></div>
+                  <div class="title--content">{{ field.title }}</div>
+                </div>
+                <div
+                  class="value"
+                  v-if="field.value"
+                >{{ field.value }}&nbsp;{{ field.type === 'checkbox-slider' ? '%' : ''}}</div>
+              </div>
+            </div>
+          </div>
         </div>
         <vue-markdown
           v-for="({ node: { license } }, index) in $static.allPreambules.edges"
@@ -51,9 +63,7 @@ query allPreambules {
 
 <script>
 import VueMarkdown from "vue-markdown-v2";
-import jsPDF from "jspdf";
-import html2pdf from "html2pdf.js";
-import html2canvas from "html2canvas";
+import { Printd } from "printd";
 
 export default {
   props: ["forms", "actives"],
@@ -62,7 +72,7 @@ export default {
       benefits: 0,
       contributor_name: "Unknown",
       pdfuri: null,
-      showPdf: false
+      printd: new Printd()
     };
   },
   computed: {
@@ -95,49 +105,120 @@ export default {
   components: {
     VueMarkdown
   },
-  mounted() {
-    this.downloadImage();
-  },
+  mounted() {},
   methods: {
-    downloadImage() {
-      const contentHtml = this.$refs.license;
-      // Save the PDF
-      html2pdf()
-        .set({
-          margin: 1,
-          image: { type: "jpeg", quality: 0.1 },
-          html2canvas: {
-            dpi: 10,
-            onclone: element => {
-              const svgElements = Array.from(element.querySelectorAll("svg"));
-              svgElements.forEach(s => {
-                const bBox = s.getBBox();
-                s.setAttribute("x", bBox.x);
-                s.setAttribute("y", bBox.y);
-                s.setAttribute("width", bBox.width / 1.92);
-                s.setAttribute("height", bBox.height / 1.92);
-              });
-            }
-          },
-          pagebreak: { mode: ["avoid-all"] },
-          jsPDF: {
-            unit: "in",
-            format: "A4",
-            orientation: "portrait"
-          }
-        })
-        .from(
-          `
-        <style>
-        .header {
-          display: block;
+    print() {
+      this.printd.print(this.$refs.license, [
+        "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css",
+        `
+        body  
+        { 
+            /* this affects the margin on the content before sending to printer */ 
+            margin: 2cm;  
+        } 
+
+        * {
+          font-size: 17pt;
         }
-        </style>
-        ${contentHtml.innerHTML}`
-        )
-        .toPdf()
-        .output("datauristring")
-        .then(res => (this.pdfuri = res));
+
+        img {
+          width: 80%;
+          text-align: center;
+        }
+
+        .markdown-body h3 {
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+        }
+
+        .markdown-body h1,
+        .markdown-body h2 {
+            clear: both;
+            page-break-before: always;
+            margin-top: 2cm;
+        }
+
+        svg {
+            width: 2em !important;
+            margin-right: 1rem !important;
+        }
+
+        .header {
+                display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+        }
+        .summary {
+          justify-self: flex-start;
+          align-self: stretch;
+          margin-top: auto;
+          padding: 2rem 0;
+          background: rgba(255, 255, 255, 0.1);
+        }
+        .summary > .title {
+          padding-left: 2rem;
+          margin-bottom: 1rem;
+          font-weight: 700;
+          font-size: 120%;
+        }
+        .summary .field {
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          display: flex;
+          padding: 0.25rem 2rem;
+        }
+        .summary .field:first-child {
+          border: none;
+        }
+        .summary .field .title {
+          flex: 1;
+          display: flex;
+          padding: 0.1rem 0rem;
+          align-items: center;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+        }
+        .summary .field .title .icon:not(:empty) {
+          flex: 0 0 1.2em;
+          height: 1.2rem;
+          margin-right: 0.75rem;
+        }
+        .summary .field .value {
+          border-left: 1px solid var(--border-color);
+          margin: 0;
+          padding: 0;
+          margin-left: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .summary {
+          margin-top: 6rem;
+          background: white;
+          border-radius: 20px;
+          color: black;
+          border: 1px solid black;
+        }
+        .summary .title {
+          margin-bottom: 0;
+        }
+        .summary .disclamer, .summary .preambule {
+          padding: 1rem 2rem;
+          padding-top: 0;
+        }
+        .summary .field {
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .summary .form {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          margin-bottom: 1rem;
+        }
+
+        `
+      ]);
     },
     getMarkdown() {
       return (
@@ -173,41 +254,66 @@ export default {
 }
 
 .license {
-  display: flex;
   flex: 1;
-  flex-wrap: wrap;
-  flex-direction: column;
   border-top: 1px solid #eee;
   margin-top: 0.5rem;
   padding: 1rem 2rem;
 
   .showPdf {
-    margin-bottom: 2rem;
-  }
-
-  .pdf-viewer {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    min-height: 60vh;
-
-    object,
-    embed {
-      width: 100%;
-      flex: 1;
-      z-index: 99999;
-    }
+    margin-bottom: 1rem;
+    width: 100%;
   }
 
   .content {
+    padding: 3rem;
+    font-size: 16px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+
     .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 80%;
+      }
+      .summary {
+        margin-top: 6rem;
+        background: rgba(135, 119, 192, 0.08);
+        border-radius: 20px;
+        color: rgba(0, 0, 0, 0.719);
+        .title {
+          margin-bottom: 0;
+        }
+        .disclamer,
+        .preambule {
+          padding: 1rem 2rem;
+          padding-top: 0;
+        }
+        .field {
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .form {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          margin-bottom: 1rem;
+        }
+      }
     }
 
-    /deep/ * {
-      box-sizing: border-box;
+    /deep/ h1 {
+      margin-top: 10rem;
     }
-    /deep/ svg {
-      width: 0.7em;
+
+    /deep/ h3 {
+      svg {
+        width: 2em;
+        margin-right: 1rem;
+      }
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
     }
 
     ul {
