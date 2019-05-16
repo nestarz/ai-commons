@@ -29,7 +29,7 @@ export default {
             (!["checkbox", "checkbox-slider"].includes(field.type) &&
               field.value)
         )
-      );
+      ).filter(options => options.length);
     }
   }
 };
@@ -38,5 +38,8 @@ export default {
 <style lang="scss" scoped>
 .form {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    &:last-of-type {
+        border: none;
+    }
 }
 </style>

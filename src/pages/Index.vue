@@ -116,7 +116,7 @@ export default {
             (!["checkbox", "checkbox-slider"].includes(field.type) &&
               field.value)
         )
-      );
+      ).filter(options => options.length);
     },
     forms() {
       return this.$page.allForms.edges.map(edge => edge.node);
