@@ -1,14 +1,15 @@
 id: identity
 order: 2
 license: |-
-  ## Contacts
+  # Contacts
 options:
   - id: contributor_name
     title: Name / Pseudonyme
     type: text
     required: true
     license: |-
-      Pour le Contributeur : __contributor_name__
+      Contributor : __contributor_name:value__
+      Email : __email:value__
   - id: email
     title: Email
     type: email

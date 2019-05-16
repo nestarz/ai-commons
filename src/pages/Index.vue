@@ -3,7 +3,7 @@
     <div class="side" :class="{ active, top: actives.length }">
       <div class="header" @click="currentStep = 0">
         <div class="title">
-          <g-image src="https://aicommons.com/wp-content/uploads/2019/02/AIC-logo-white-1@3x.png"/>
+          <g-image src="./AIC-logo-white.png"/>
         </div>
       </div>
       <div class="intro">
@@ -26,7 +26,7 @@
         >Start</el-button>
       </div>
       <div class="fields" v-if="actives.length">
-        <div class="title">Contenu de la Licence</div>
+        <div class="title">Summary</div>
         <div class="field" v-for="field in actives" :key="field.id">
           <div class="title">
             <div v-html="field.icon" class="icon"></div>
@@ -46,7 +46,7 @@
           <el-step></el-step>
           <el-step></el-step>
         </el-steps>
-        <final-license ref="license" :forms="forms" v-if="currentStep === forms.length"/>
+        <final-license ref="license" :forms="forms" :actives="actives" v-if="currentStep === forms.length"/>
         <commons-form :fields="form.options" :text="form.description" ref="form" v-else/>
         <div class="pager">
           <el-button round icon="el-icon-arrow-left" @click="prev" v-if="currentStep !== 0">Previous</el-button>

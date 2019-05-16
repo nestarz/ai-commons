@@ -1,22 +1,22 @@
 id: conditions
 order: 0
 description: >
-  Le Common sous Licence visée par la présente Licence est de la/des nature(s) suivante(s):
+  Select type(s) of Common(s) that you intends to make benefit from the terms of this License.
 license: |-
-  ## Formulaire A
+  ## Form A : Specific Terms related to the type of Licensed Common
 
-  Le présent formulaire A permet au Contributeur, compte tenu de la nature spécifique du Common qu’il Licencie, de définir des termes spécifiques applicables. Lorsqu’il rempli les présentes Conditions Spécifiques, le Contributeur coche la et/ou les cases correspondant au(x) type(s) de Common(s) qu’il entend faire bénéficier des termes de la présente Licence.
+  This form A allows the Contributor, given the specific nature of the Licensed Common, to define specific terms applicable. When filling this Form, the Contributor checks the box(es) corresponding to the type(s) of Common(s) that he intends to make benefit from the terms of this License. 
 
-  Le Contributeur déclare que les stipulations suivantes sont applicables à le Common sous Licence :
+  **The Contributor declares that the following stipulations are applicable to the Licensed Common:**
 options:
   - id: algorithms
     type: checkbox
-    title: Algorithmes
+    title: Algorithms
     description: A machine-learning algorithm is a mathematical model that learns to find patterns in the input that is fed to it. This input is referred to as training data.
     license: |-
-      ### Algorithmes
+      ### Algorithms
 
-      Le Common contient un/(des) Algorithme(s)
+      The Common includes one or more Algorithm(s)
     code: >-
       def train(x, y):
         weights = 2 * random((3, 1)) - 1
@@ -26,30 +26,30 @@ options:
 
   - id: models
     type: checkbox
-    title: Modèles
+    title: Models
     description: Weights and biases are the learnable parameters of your model. When presented with data during training, they are adjusted towards values that have correct output.
     license: |-
-      ### Modèles
+      ### Models
+      The Common includes one or more Model(s). 
 
-      Le Common contient un/(des) Modèles(s).
-
-      Si le Modèle est accompagné des données d’entraînement, le niveau de confiance est en ce modèle est fort pour l’Utilisateur. A l’inverse, si le Modèle n’est pas accompagné des données d'entraînement, l’Utilisateur est mis en garde contre le faible niveau de confiance du Modèle.
+      If the model is supported by training dataset, the level of confidence is in this model is strong for the User. Conversely, if the model is not supported by training dataset, the User is warned against the low level of confidence of the model.
     code: |-
       weights = train(x, y)
       >>> [0.12,0.1981,0.679,0.235]
 
   - id: database
     type: checkbox
-    title: Bases de données
+    title: Databases
     license: |-
-      ### Bases de données
+      ### Databases
 
-      Le Common contient un/(des) Base(s) de données
+      The Common includes one or more database(s)
 
-      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+      _Provided the Contributor has checked this box, the following terms are part of the License. The User agrees to:_
 
-      * **Protection PI des bases de données.** Une base de données est « un recueil d’œuvres, de données ou d’autres éléments indépendants, disposés de manière systématique ou méthodique, et individuellement accessibles par des moyens électroniques ou par tout autre moyen. ». La structure d’un base de données, c’est-à-dire la manière dont les données sont organisées, est protégée par le droit d’auteur.
-      * **Droit sui generis des bases de données** Outre le droit d’auteur qui protège la structure de la base de données, son contenu fait l’objet protection sui generis par le droit de la propriété intellectuelle. Le droit sui generis des bases de données a la signification qui lui ai donnée dans la Licence Utilisateur. A titre de clarification, le Contributeur concède à l’Utilisateur a le droit d’extraire, réutiliser, reproduire et partager (à l’exception du partage des Oeuvres Dérivées si le Contributeur a sélectionné l’Attribution “Interdiction des Oeuvres Dérivées”) tout ou partie (et ce incluant “une partie quantitativement ou qualitativement significative”) du contenu de la base de données. Si l’Utilisateur utilise une partie quantitativement ou qualitativement significative de la base de donnée en l’incluant dans une base de données dont il est producteur, cette seconde base de données est une Oeuvre Dérivée.
+      **IP protection of databases.** A database is "a collection of works, data or other independent elements, arranged in a systematic or methodical manner, and individually accessible by electronic means or by any other means." The structure of a database, which is the way the data are organized, is protected by copyright. 
+
+      **_Sui generis_ right.** In addition to the IP rights that protects the structure of the database, its content is protected _sui generis_ under applicable copyright laws. The _sui generis_ right of databases has the meaning given to it in the User License. For the sake of clarity, the Contributor grants the User the right to extract, reuse, reproduce and share the content of the database in its entirety (except for the sharing of Derivative Works if the Contributor has selected the "Derived Works Prohibition" Attribution) or part (and including "a quantitatively or qualitatively significant part") of the contents of the database. If the User uses a quantitatively or qualitatively significant part of the database by including it in a new database of which he is a producer, this second database shall be considered as a Derivative Work.
     code: >-
       X = [[0, 0, 1], 
           [1, 1, 1], 
@@ -60,16 +60,17 @@ options:
   
   - id: traindata
     type: checkbox
-    title: Données d'entraînement
+    title: Training dataset
     license: |-
-      ### Données d'entraînement
+      ### Training dataset
 
-      Le Common contient un/(des) Base(s) de données
+      The Common includes one or more Training dataset
 
-      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+      _Provided the Contributor has checked this box, the following terms are part of the License. The User agrees to:_
 
-      * **Protection PI des bases de données.** Une base de données est « un recueil d’œuvres, de données ou d’autres éléments indépendants, disposés de manière systématique ou méthodique, et individuellement accessibles par des moyens électroniques ou par tout autre moyen. ». La structure d’un base de données, c’est-à-dire la manière dont les données sont organisées, est protégée par le droit d’auteur.
-      * **Droit sui generis des bases de données** Outre le droit d’auteur qui protège la structure de la base de données, son contenu fait l’objet protection sui generis par le droit de la propriété intellectuelle. Le droit sui generis des bases de données a la signification qui lui ai donnée dans la Licence Utilisateur. A titre de clarification, le Contributeur concède à l’Utilisateur a le droit d’extraire, réutiliser, reproduire et partager (à l’exception du partage des Oeuvres Dérivées si le Contributeur a sélectionné l’Attribution “Interdiction des Oeuvres Dérivées”) tout ou partie (et ce incluant “une partie quantitativement ou qualitativement significative”) du contenu de la base de données. Si l’Utilisateur utilise une partie quantitativement ou qualitativement significative de la base de donnée en l’incluant dans une base de données dont il est producteur, cette seconde base de données est une Oeuvre Dérivée.
+      **IP protection of databases.** A database is "a collection of works, data or other independent elements, arranged in a systematic or methodical manner, and individually accessible by electronic means or by any other means." The structure of a database, which is the way the data are organized, is protected by copyright. 
+
+      **_Sui generis _right. **In addition to the IP rights that protects the structure of the database, its content is protected _sui generis_ under applicable copyright laws. The _sui generis_ right of databases has the meaning given to it in the User License. For the sake of clarity, the Contributor grants the User the right to extract, reuse, reproduce and share the content of the database in its entirety (except for the sharing of Derivative Works if the Contributor has selected the "Derived Works Prohibition" Attribution) or part (and including "a quantitatively or qualitatively significant part") of the contents of the database. If the User uses a quantitatively or qualitatively significant part of the database by including it in a new database of which he is a producer, this second database shall be considered as a Derivative Work.
     code: |-
       x = X[1, 100]
       y = Y[1, 100]

@@ -1,6 +1,6 @@
 <template>
   <form class="form">
-    <div class="text">{{ text }}</div>
+    <div class="text" v-html="text"></div>
     <div class="fields">
       <div class="field" v-for="field in fields" :key="field.id" @click="toggleSelect(field)">
         <div class="checkbox" v-if="field.type.includes('checkbox')">

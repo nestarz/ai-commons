@@ -1,17 +1,37 @@
 <template>
   <div class="license">
-    <div class="pdf-viewer">
+    <el-button class="showPdf" round @click="showPdf = !showPdf">
+      Show as
+      <span v-if="showPdf">HTML</span>
+      <span v-else>PDF</span>
+    </el-button>
+    <div class="pdf-viewer" v-if="showPdf">
       <object :data="pdfuri" type="application/pdf" v-if="pdfuri">
         <iframe :src="`https://docs.google.com/viewer?url=${pdfuri}&embedded=true`"></iframe>
       </object>
     </div>
-    <div ref="license" class="content">
-      <vue-markdown
-        v-for="({ node: { license } }, index) in $static.allPreambules.edges"
-        :source="license"
-        :key="index"
-      ></vue-markdown>
-      <vue-markdown v-for="(paragraph, index) in paragraphs" :source="paragraph" :key="index"></vue-markdown>
+    <div ref="license" class="content" v-show="!showPdf">
+      <div class="body">
+        <div class="header">
+          <img src="./AIC-logo-black.png">
+          <h2>Summary</h2>
+          <ol v-if="actives.length">
+            <li v-for="field in actives" :key="field.id">
+              <span v-html="field.icon"></span>
+              {{ field.title }}
+              <template
+                v-if="field.value"
+              >: {{ field.value }}&nbsp;{{ field.type === 'checkbox-slider' ? '%' : ''}}</template>
+            </li>
+          </ol>
+        </div>
+        <vue-markdown
+          v-for="({ node: { license } }, index) in $static.allPreambules.edges"
+          :source="license"
+          :key="index"
+        ></vue-markdown>
+        <vue-markdown v-for="(paragraph, index) in paragraphs" :source="paragraph" :key="index"></vue-markdown>
+      </div>
     </div>
   </div>
 </template>
@@ -31,16 +51,18 @@ query allPreambules {
 
 <script>
 import VueMarkdown from "vue-markdown-v2";
-import * as jsPDF from "jspdf";
-import html2pdf from 'html2pdf.js';
+import jsPDF from "jspdf";
+import html2pdf from "html2pdf.js";
+import html2canvas from "html2canvas";
 
 export default {
-  props: ["forms"],
+  props: ["forms", "actives"],
   data() {
     return {
       benefits: 0,
       contributor_name: "Unknown",
-      pdfuri: null
+      pdfuri: null,
+      showPdf: false
     };
   },
   computed: {
@@ -74,35 +96,48 @@ export default {
     VueMarkdown
   },
   mounted() {
-    this.download();
+    this.downloadImage();
   },
   methods: {
-    download() {
-       const doc = new jsPDF();
-      doc.addFont('Amiri', 'Amiri', 'normal');
-      doc.setFont('Amiri'); // set font
-      doc.setFontSize(20);
-      doc.setTextColor(0, 0, 0);
-      const contentHtml = this.$refs.license.innerHTML;
-      doc.html(contentHtml, {
-        callback: function (doc) {
-          doc.save();
-        }
-      });
-    },
     downloadImage() {
-      const contentHtml = this.$refs.license.innerHTML;
+      const contentHtml = this.$refs.license;
       // Save the PDF
-      html2pdf(contentHtml, {
-        margin:       .1,
-        filename:     'Interview_Form.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { dpi: 192 },
-        jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait', footer: 'a' },
-        pdfCallback:  pdf => {
-          this.pdfuri = pdf.output("datauristring");
-        },
-      });
+      html2pdf()
+        .set({
+          margin: 1,
+          image: { type: "jpeg", quality: 0.1 },
+          html2canvas: {
+            dpi: 10,
+            onclone: element => {
+              const svgElements = Array.from(element.querySelectorAll("svg"));
+              svgElements.forEach(s => {
+                const bBox = s.getBBox();
+                s.setAttribute("x", bBox.x);
+                s.setAttribute("y", bBox.y);
+                s.setAttribute("width", bBox.width / 1.92);
+                s.setAttribute("height", bBox.height / 1.92);
+              });
+            }
+          },
+          pagebreak: { mode: ["avoid-all"] },
+          jsPDF: {
+            unit: "in",
+            format: "A4",
+            orientation: "portrait"
+          }
+        })
+        .from(
+          `
+        <style>
+        .header {
+          display: block;
+        }
+        </style>
+        ${contentHtml.innerHTML}`
+        )
+        .toPdf()
+        .output("datauristring")
+        .then(res => (this.pdfuri = res));
     },
     getMarkdown() {
       return (
@@ -115,34 +150,65 @@ export default {
       const regex = varname => new RegExp(`__${varname}__`, "g");
       return this.forms
         .flatMap(forms => forms.options)
-        .reduce(
-          (str, option) => str.replace(regex(option.id), option.value),
-          string
-        );
+        .reduce((str, option) => {
+          Object.keys(option).forEach(
+            key =>
+              (str = str.replace(regex(`${option.id}:${key}`), option[key]))
+          );
+          return str;
+        }, string);
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.html2pdf__container {
+  line-height: 20px;
+  font-size: 20px;
+
+  svg {
+    width: 0.7em;
+  }
+}
+
 .license {
   display: flex;
   flex: 1;
   flex-wrap: wrap;
+  flex-direction: column;
+  border-top: 1px solid #eee;
+  margin-top: 0.5rem;
+  padding: 1rem 2rem;
+
+  .showPdf {
+    margin-bottom: 2rem;
+  }
+
   .pdf-viewer {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
-    object, embed {
+    min-height: 60vh;
+
+    object,
+    embed {
       width: 100%;
       flex: 1;
+      z-index: 99999;
     }
   }
-  
+
   .content {
-    margin-top: 0.5rem;
-    padding: 1rem 2rem;
-    border-top: 1px solid #eee;
+    .header {
+    }
+
+    /deep/ * {
+      box-sizing: border-box;
+    }
+    /deep/ svg {
+      width: 0.7em;
+    }
 
     ul {
       margin: 0;

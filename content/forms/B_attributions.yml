@@ -1,73 +1,72 @@
 id: attributions
 order: 1
-description: >-
-  Le Contributeur accorde à l’Utilisateur le droit personnel, gratuit, non-transmissible,
-  non sous-licenciable et non-exclusif d'utiliser, pour le Monde entier et de manière
-  irrévocable, le Common sous Licence. Les Conditions Spécifiques applicables sont les suivantes:
+description: |-
+  Select conditions under which the rights granted by the License are exercised.
 license: |-
-  ## Formulaire B: Attributions
+  ## Attributions
 
-  Le présent formulaire B permet au Contributeur de définir des Attributions spécifiques applicables à le Common sous Licence. “Attributions” désigne les conditions dans lesquels s’exercent les droits accordés par la Licence sélectionnés par le Contributeur. Lorsqu’il rempli les présentes Conditions Spécifiques, le Contributeur coche la et/ou les cases correspondant au(x) type(s) de Common(s) qu’il entend faire bénéficier des termes de la présente Licence.
+  This Form B allows the Contributor to set the specific Attributions applicable to the Licensed Common. "Attributions" means the conditions under which the rights granted by the License selected by the Contributor are exercised. When filling these Specific Terms, the Contributor checks the box(es) corresponding to the Attriution(s)  that he intends to apply to its Commons.
 
-  Le Contributeur déclare que les stipulations suivantes sont applicables à le Common sous Licence :
+  **The Contributor declares that the following stipulations are applicable to the Licensed Common:**
 options:
   - id: cite_contributor
     type: checkbox
-    title: Citation du Contributeur
+    title: Contributor’s credit
     icon: <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><defs><style>.cls-1{fill:#fff;stroke-width:6px;}.cls-1,.cls-2{stroke:#000;stroke-miterlimit:10;}.cls-2{fill:none;}</style></defs><title>Untitled-2</title><circle class="cls-1" cx="25.5" cy="25.5" r="22.5"/><path class="cls-2" d="M26.71,17.1" transform="translate(0.5 0.5)"/><path d="M25,23.46c6.43,0,6.45-10,0-10s-6.45,10,0,10Z" transform="translate(0.5 0.5)"/><path d="M15,35.62H35c6.43,0,6.45-10,0-10H15c-6.43,0-6.45,10,0,10Z" transform="translate(0.5 0.5)"/></svg>
     license: |-
-      ### Citation du Contributeur
+      ### __cite_contributor:icon__ Contributor’s credit
 
-      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+      _Provided the Contributor has checked this box, the following terms are part of the License. The User agrees to:_
 
-      L’Utilisateur, lorsqu’il reproduit et/ou partage tout ou partie du Common sous Licence (y compris sous une forme modifiée ne constituant pas une Oeuvre Dérivée), ou lorsqu’il reproduit et/ou partage tout ou partie d’une Oeuvre Dérivée du Common sous Licence, est tenu d’apposer de manière lisible sur sa communication du Common sous Licence:
+      The User, when reproducing and / or sharing all or part of the Licensed Common (including in a modified form not constituting a Derivative Work), or when reproducing and / or sharing all or part of a Derived Work from the Licensed Common, is required to affix in a legible manner:
 
-      1.  l’identité (ou le pseudonyme) du Contributeur tel(le) que le Contributeur l’a renseigné ici: __contributor_name__
-      ou de tout personne titulaire des droits de propriété intellectuelle sur le Common dont le Contributeur aurait renseigné l’identité ici : __contributor_name__
-      en indiquant que le Common est protégé par le droit d’auteur et les droits voisins applicables
-      2.  un lien (URL) vers le Common ainsi qu’un lien (URL) vers la présente licence ou un résumé de la présente licence incluant notamment les limitations relatives aux garanties et responsabilité
-      3.  en cas de modification du Common, indiquer qu’il s’agit d’une version modifiée/d’une Oeuvre Dérivée
 
-      L’Utilisateur peut notamment renvoyer (par exemple par copie ou par lien URL) vers le Résumé de la Licence figurant en première page de la Licence Utilisateur).
 
-      Sur simple demande du Contributeur, certaines des informations visées à la présente clause devront être retirées par l’Utilisateur.
+      1. the identity (or pseudonym) of the Contributor as entered here by the Contributor: __contributor_name:value__, or any person holding the intellectual property rights on the Common of which the Contributor has entered the identity here: __contributor_name:value__, indicating that the Common is protected by copyright and other similar rights
+      2. a link (URL) to the Common and a link (URL) to this License or a summary of this license including, but not limited to, limitations on warranties and liability
+      3. in the event of a change in the Common, indicate that it is a modified version / a Derivative Work
+
+      In particular, the User may send back (for example by copy or URL link) to the License Summary on the first page of the User License.
+
+      Upon request of the Contributor, some of the information referred to in this clause must be withdrawn by the User.
   - id: commercial_uses
     type: checkbox
-    title: Usages Commerciaux Interdits
+    title: Prohibition of commercial use
     icon: <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><defs><style>.cls-1{fill:#fff;stroke-width:6px;}.cls-1,.cls-2,.cls-3{stroke:#000;stroke-miterlimit:10;}.cls-2,.cls-3{fill:none;}.cls-3{stroke-width:7px;}</style></defs><title>dollar2</title><circle class="cls-1" cx="25.5" cy="25.5" r="22.5"/><path class="cls-2" d="M26.71,17.1" transform="translate(0.5 0.5)"/><line class="cls-3" x1="12" y1="8" x2="40" y2="44"/><path d="M14,35.4l3.12-4.07a12.69,12.69,0,0,0,7,2.4c2.77,0,4-1,4-2.82,0-4.22-12.87-4.14-12.87-11.54,0-4.75,3.92-7.78,10.1-7.78a13.17,13.17,0,0,1,9.28,3.48L31,18.52a8.23,8.23,0,0,0-5.31-2.07c-2.34,0-3.61.8-3.61,2.64C22.08,23,35,22.66,35,30.49c0,4.7-3.71,8.1-10.85,8.1A18.08,18.08,0,0,1,14,35.4ZM22.6,7.58h4.76v5.9H22.6Zm0,28.56h4.76v6.47H22.6Z" transform="translate(0.5 0.5)"/></svg>
     license: |-
-      ### Usages commerciaux interdits
+      ### __commercial_uses:icon__ Prohibition of commercial use
 
-      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+      _Provided the Contributor has checked this box, the following terms are part of the License. The User agrees to:_
 
-      L’ensemble des droits concédés par le Contributeur à l’Utilisateur dans le cadre de la Licence le sont pour une utilisation non-commerciale uniquement. L’Utilisateur s’interdit de faire usage des droits qui lui sont concédés dans le cadre de la Licence sur le Common sous Licence pour des Usages Commerciaux.
+      All rights granted by the Contributor to the User under the License are for non-commercial use only. The User is prohibited from making use of the rights granted to him under the Licensed Common License for Commercial Uses.
   - id: derivative_works
     type: checkbox
-    title: Interdiction des Oeuvres Dérivées
+    title: Derivative Work prohibited
     icon: <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><defs><style>.cls-1{fill:#fff;stroke-width:6px;}.cls-1,.cls-2,.cls-3,.cls-4{stroke:#000;stroke-miterlimit:10;}.cls-2,.cls-3{fill:none;}.cls-3{stroke-width:7px;}.cls-4{stroke-width:3px;}</style></defs><title>derivative</title><circle class="cls-1" cx="25.5" cy="25.5" r="22.5"/><path class="cls-2" d="M26.71,17.1" transform="translate(0.5 0.5)"/><line class="cls-3" x1="12" y1="8" x2="40" y2="44"/><path class="cls-4" d="M29.41,25.52l-3.22,3.24a6.44,6.44,0,0,1,1.12,3.48,6,6,0,0,1-5.86,5.9,6,6,0,0,1-6-6A5.63,5.63,0,0,1,17.18,28a5.73,5.73,0,0,1,4.19-1.74,6.37,6.37,0,0,1,3.54,1.2l3.24-3.26A7.05,7.05,0,0,1,27,20.84a5.76,5.76,0,0,1,1.75-4.2,5.64,5.64,0,0,1,4.15-1.76,5.73,5.73,0,0,1,4.19,1.7,5.55,5.55,0,0,1,1.74,4.12,5.95,5.95,0,0,1-6.09,6.06A6.16,6.16,0,0,1,29.41,25.52Zm-8,2.38a4.23,4.23,0,0,0-3.13,1.26,4.3,4.3,0,0,0-1.25,3.14,4,4,0,0,0,1.26,3,4.42,4.42,0,0,0,3.18,1.19,3.92,3.92,0,0,0,2.9-1.3,4.23,4.23,0,0,0,0-6A4,4,0,0,0,21.45,27.9ZM33,16.52a4.1,4.1,0,0,0-3,1.27,4.18,4.18,0,0,0-1.26,3.05,4,4,0,0,0,1.26,3,4.32,4.32,0,0,0,3.12,1.22,4,4,0,0,0,3-1.26,4.26,4.26,0,0,0,0-6.06A4.16,4.16,0,0,0,33,16.52Z" transform="translate(0.5 0.5)"/></svg>
     license: |-
-      ### Interdiction des Oeuvres dérivés
+      ### __derivative_works:icon__ Derivative Work prohibited
 
-      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+      _Provided the Contributor has checked this box, the following terms are part of the License. The User agrees to:_
 
-      L’ensemble des droits concédés par le Contributeur à l’Utilisateur dans le cadre de la Licence le sont pour le Common sous Licence uniquement. Le partage des Oeuvres Dérivées du Common sous Licence est prohibé par le Contributeur.
+      All rights granted by the Contributor to the User under the License are for the Licensed Common only. Sharing of Derivative Works from the Licensed Common is prohibited by the Contributor. 
 
-      En conséquences, la clause 3.1 (ii) de la Licence utilisateur est remplacée comme suit:
+      As a consequence, clause 3.1 (ii) of the User License is replaced as follows: 
 
-      1.  l’Utilisateur a le droit de produire, reproduire, mais pas de partager les éventuelles Oeuvres Dérivées du Common sous Licence, dans leur intégralité ou en partie(s).
+      2. the User has the right to produce, reproduce, but not share any Licensed Common Derived Works, in whole or in part.
+
   - id: same_conditions_share
     type: checkbox
-    title: Partage dans les mêmes conditions
+    title: Sharing under the same conditions
     icon: <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><defs><style>.cls-1{fill:#fff;stroke-width:6px;}.cls-1,.cls-2,.cls-3{stroke:#000;stroke-miterlimit:10;}.cls-2{fill:none;}.cls-3{stroke-width:3px;}</style></defs><title>cscsd</title><circle class="cls-1" cx="25.5" cy="25.5" r="22.5"/><path class="cls-2" d="M26.71,17.1" transform="translate(0.5 0.5)"/><path class="cls-3" d="M15,31.38a5,5,0,0,0-.64,2.15c0,.09,0,.38.07.73l-4.07-7a1.85,1.85,0,0,1,0-1.86l2-3.39-2.15-1.21,7-.13,3.39,6.11-2.18-1.25Zm4.42-5.69-2.56-4.51-5.15.06,1.18.67-2.11,3.68a1.63,1.63,0,0,0-.19.8,1.61,1.61,0,0,0,.16.71L14,32.66A4.91,4.91,0,0,1,14.73,31l3.45-6ZM17.9,12.28a3.29,3.29,0,0,1,2.87-1.66,3.39,3.39,0,0,1,3,1.85l1.09,1.8L21,21l-6.14-3.56Zm.48,24.86a3.34,3.34,0,0,1-3.33-3.32,4.43,4.43,0,0,1,.54-1.92l1-1.83h7.74v7.07ZM23.43,12.7a3,3,0,0,0-2.66-1.6,2.8,2.8,0,0,0-2.49,1.41l-2.75,4.76,5.34,3.11,3.52-6.11ZM16,32.12a3.85,3.85,0,0,0-.45,1.63,2.91,2.91,0,0,0,2.88,3h5.5V30.52h-7Zm8.6-19.9a4.07,4.07,0,0,0-2.21-2h8.07a1.9,1.9,0,0,1,1.66,1L34,14.55l2.11-1.24-3.36,6.11-7-.13L27.94,18Zm2.72,6.65,5.19,0L35,14.43l-1.18.7-2.08-3.65a1.6,1.6,0,0,0-1.34-.77H24A3.92,3.92,0,0,1,25,12l.09.16,3.46,6Zm9,11.27a4.1,4.1,0,0,0,2.79-.93l-4,7a1.76,1.76,0,0,1-1.6.92H29.57v2.47l-3.61-6,3.61-6v2.5Zm-7.13-1-2.63,4.48,2.63,4.41V36.7h4.22A1.58,1.58,0,0,0,34.73,36l3.16-5.6a4.44,4.44,0,0,1-1.82.22H29.16Zm10.46-4.87a3.11,3.11,0,0,1,.48,1.63,3.5,3.5,0,0,1-3.61,3.43H34.34L30.5,22.68l6.15-3.52Zm-3.13,4.61a3,3,0,0,0,3.13-3,2.59,2.59,0,0,0-.41-1.4l-2.76-4.77-5.34,3.07,3.49,6.08Z" transform="translate(0.5 0.5)"/></svg>
     license: |-
-      ### Partage dans les mêmes conditions de Licence
+      ### __same_conditions_share:icon__ Sharing under the same conditions
 
-      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+      _Provided the Contributor has checked this box, the following terms are part of the License. The User agrees to:_
 
-      Tout partage du Common par l’Utilisateur, ainsi que toute transformation ou création à partir du Common par l’Utilisateur, devra être partagée sous les mêmes termes que la présente Licence (incluant la Licence Utilisateur et les Conditions Spécifiques)
+      Any transformation or creation from the Licensed Common by the User must be shared under the same terms as this License (including the User License and the Specific Terms). In particular, if the Contributor has authorized the Commercial Use with profit-sharing to be defined between the Contributor and the User, any commercial profits made by the User during the sharing will be taken into account in the calculation basis of the Benefits of the Contributor.
   - id: benefits
-    title: Usages Commerciaux autorisés avec partage des bénéfices à définir entre le Contributeur et l’Utilisateur
-    description: Indiquez ici le pourcentage des bénéfices que vous souhaitez percevoir
+    title: Commercial Uses allowed with Common Profit Sharing
+    description: "Indicate the percentage of the benefits you wish to receive:"
     type: checkbox-slider
     icon: <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><defs><style>.cls-1{fill:#fff;stroke-width:6px;}.cls-1,.cls-2,.cls-3{stroke:#000;stroke-miterlimit:10;}.cls-2{fill:none;}.cls-3{stroke-width:3px;}</style></defs><title>share</title><circle class="cls-1" cx="25.5" cy="25.5" r="22.5"/><path class="cls-2" d="M26.71,17.1" transform="translate(0.5 0.5)"/><path class="cls-3" d="M25.48,35.17a9.65,9.65,0,0,1-7.08-2.93,9.59,9.59,0,0,1-2.92-7.06,9.52,9.52,0,0,1,2.93-7,9.7,9.7,0,0,1,7.09-2.89A9.48,9.48,0,0,1,32.37,18a9.55,9.55,0,0,1,3.06,7.12,9.67,9.67,0,0,1-2.92,7.08A9.56,9.56,0,0,1,25.48,35.17Zm-.67-1.33v-9.3l9.27-.06a8.15,8.15,0,0,0-2.2-5.06,8.25,8.25,0,0,0-6.46-2.88,8.74,8.74,0,0,0-8.67,8.72A8.37,8.37,0,0,0,17.64,29a8.21,8.21,0,0,0,2.45,3A8.72,8.72,0,0,0,24.81,33.84Zm1.34,0a8.37,8.37,0,0,0,5.43-2.44,9.3,9.3,0,0,0,2.51-5.62h-8Z" transform="translate(0.5 0.5)"/></svg>
     value: 50
@@ -75,18 +74,16 @@ options:
     max: 100
     step: 5
     license: |-
-      ### Usages Commerciaux autorisés avec partage des bénéfices à définir entre le Contributeur et l’Utilisateur
+      ### __benefits:icon__ Commercial Uses allowed with Common Profit Sharing
 
-      Sous réserve que le Contributeur ait coché la présente case, les termes suivant font intégralement partie de la Licence. L’Utilisateur s’engage à :
+      _Provided the Contributor has checked this box, the following terms are part of the License. The User agrees to:_
 
-      Le périmètre de la Licence concédée par le Contributeur à l’Utilisateur est complété des droits suivants, pour le Common et les Oeuvres Dérivées, ou uniquement pour le Common si le Contributeur a Attribué “Interdiction des Oeuvres Dérivées” :
+      The perimeter of the License granted by the Contributor to the User is completed with the following rights, for the Common and the Derivative Works, or only for the Common if the Contributor has ticked the "Derived Works prohibition" box:
 
-      1. Le droit de distribution : le droit de commercialiser le Common sous Licence, directement ou indirectement, à titre onéreux ou gratuit, par tout mode d’exploitation y compris la location, le prêt ou la vente du Common sous Licence, la mise à disposition sous forme de licence ou de service externalisé (telle que ASP, SAAS, etc.), selon tout mode ou réseau de distribution (par exemple, VAR, OEM, etc.), en tout ou partie, associé ou non à d’autres du Common sous Licence ou d’autres produits de nature différente, par tout procédé et sur tout support et ce, pour tout public et sans limitation ;
+      3. _distribution right:_ the right to market the Licensed Common, directly or indirectly, whether in return for payment or free of charge, by any means of exploitation including the lease, loan or sale of the Licensed Common; available in the form of an outsourced license or service (such as SAAS, etc.), in any mode or network, in whole or in part, associated or not with others of the Licensed Common or other products of a different nature, by any process and on any medium, for any public and without limitation;
       
-      2. Le droit d’usage : le droit de faire usage et d’exploiter le Common sous Licence à titre personnel ou au bénéfice de tiers, à titre onéreux ou gratuit, aux fins d’effectuer toutes formes de traitement, notamment infogérance et service bureau, à quelque titre que ce soit.
+      4. _right of use:_ the right to use and exploit the Licensed Common for personal use or for the benefit of third parties, whether in return for payment or free of charge, for the purpose of performing all forms of processing, including outsourcing and office service, for whatever reason.
 
-      Le Contributeur et l’Utilisateur conviennent de partager les bénéfices issus des Usages Commerciaux par l’Utilisateur dans les conditions suivantes (cocher la case) :
-
-      * Bénéfices revenant en totalité à l’Utilisateur
+      <span style="text-decoration:underline;">The Contributor and the User agree to share the profits from the Commercial Uses by the User under the following conditions:</span>
       
-      * Répartition des bénéfices selon les modalités suivantes: L'utilisateur s'engage à reverser __benefits__ % des bénéfices commerciaux issus de la présente licence au contributeur.
+      * Benefits to be shared as follows: The user agrees to pay __benefits:value__% of the commercial profits from this license to the contributor.
