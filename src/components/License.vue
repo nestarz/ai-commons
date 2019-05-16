@@ -24,6 +24,7 @@ query allPreambules {
 
 <script>
 import VueMarkdown from "vue-markdown-v2";
+import * as jsPDF from 'jspdf';
 
 export default {
   props: ["forms"],
@@ -64,7 +65,18 @@ export default {
   components: {
     VueMarkdown
   },
+  mounted() {
+    this.download();
+  },
   methods: {
+    download() {
+      const doc = new jsPDF();
+      const contentHtml = this.$refs.license.innerHTML;
+      doc.fromHTML(contentHtml, 15, 15, {
+        width: 170
+      });
+      doc.save("LICENSE.pdf");
+    },
     getMarkdown() {
       return (
         this.$static.allPreambules.edges[0].node.license +
