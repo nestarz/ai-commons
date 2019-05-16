@@ -1,11 +1,18 @@
 <template>
-  <div ref="license" class="license">
-    <vue-markdown
-      v-for="({ node: { license } }, index) in $static.allPreambules.edges"
-      :source="license"
-      :key="index"
-    ></vue-markdown>
-    <vue-markdown v-for="(paragraph, index) in paragraphs" :source="paragraph" :key="index"></vue-markdown>
+  <div class="license">
+    <div class="pdf-viewer">
+      <object :data="pdfuri" type="application/pdf" v-if="pdfuri">
+        <iframe :src="`https://docs.google.com/viewer?url=${pdfuri}&embedded=true`"></iframe>
+      </object>
+    </div>
+    <div ref="license" class="content">
+      <vue-markdown
+        v-for="({ node: { license } }, index) in $static.allPreambules.edges"
+        :source="license"
+        :key="index"
+      ></vue-markdown>
+      <vue-markdown v-for="(paragraph, index) in paragraphs" :source="paragraph" :key="index"></vue-markdown>
+    </div>
   </div>
 </template>
 
@@ -24,19 +31,20 @@ query allPreambules {
 
 <script>
 import VueMarkdown from "vue-markdown-v2";
-import * as jsPDF from 'jspdf';
+import * as jsPDF from "jspdf";
+import html2pdf from 'html2pdf.js';
 
 export default {
   props: ["forms"],
   data() {
     return {
       benefits: 0,
-      contributor_name: "Unknown"
+      contributor_name: "Unknown",
+      pdfuri: null
     };
   },
   computed: {
     paragraphs() {
-      console.log(this.forms);
       const res = this.forms
         .filter(
           form =>
@@ -70,12 +78,31 @@ export default {
   },
   methods: {
     download() {
-      const doc = new jsPDF();
+       const doc = new jsPDF();
+      doc.addFont('Amiri', 'Amiri', 'normal');
+      doc.setFont('Amiri'); // set font
+      doc.setFontSize(20);
+      doc.setTextColor(0, 0, 0);
       const contentHtml = this.$refs.license.innerHTML;
-      doc.fromHTML(contentHtml, 15, 15, {
-        width: 170
+      doc.html(contentHtml, {
+        callback: function (doc) {
+          doc.save();
+        }
       });
-      doc.save("LICENSE.pdf");
+    },
+    downloadImage() {
+      const contentHtml = this.$refs.license.innerHTML;
+      // Save the PDF
+      html2pdf(contentHtml, {
+        margin:       .1,
+        filename:     'Interview_Form.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { dpi: 192 },
+        jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait', footer: 'a' },
+        pdfCallback:  pdf => {
+          this.pdfuri = pdf.output("datauristring");
+        },
+      });
     },
     getMarkdown() {
       return (
@@ -99,17 +126,32 @@ export default {
 
 <style lang="scss" scoped>
 .license {
-  margin-top: 0.5rem;
-  padding: 1rem 2rem;
-  border-top: 1px solid #eee;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  .pdf-viewer {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    object, embed {
+      width: 100%;
+      flex: 1;
+    }
+  }
+  
+  .content {
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+    border-top: 1px solid #eee;
 
-  ul {
-    margin: 0;
-    padding: 0;
-    li {
-      list-style: none;
+    ul {
       margin: 0;
       padding: 0;
+      li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
     }
   }
 }

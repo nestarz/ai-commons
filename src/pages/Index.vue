@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="main">
+    <div class="main" @click="active = true">
       <div class="content">
         <el-steps class="steps" :active="currentStep" finish-status="success">
           <el-step></el-step>
@@ -289,14 +289,20 @@ export default {
         margin: 0;
         padding: 2rem;
         padding-top: 0rem;
+        border-bottom: 1px solid var(--border-color);
 
-        @media screen and (max-width: 1050px) {
-          border-bottom: 1px solid var(--border-color);
+        @media screen and (min-width: 1050px) {
+          border-bottom: none;
         }
       }
 
       .start {
         margin: 0 2rem;
+        display: none;
+
+        @media screen and (min-width: 1050px) {
+          display: block;
+        }
       }
     }
     .header {

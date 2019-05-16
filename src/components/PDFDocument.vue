@@ -12,7 +12,7 @@
 import range from 'lodash/range';
 
 export default {
-  props: ['url', 'scale'],
+  props: ['src', 'scale'],
 
   data() {
     return {
@@ -26,7 +26,7 @@ export default {
   methods: {
     fetchPDF() {
       import('pdfjs-dist/webpack').
-        then(pdfjs => pdfjs.getDocument(this.url)).
+        then(pdfjs => pdfjs.getDocument(this.src)).
         then(pdf => (this.pdf = pdf));
     },
   },
