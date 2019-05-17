@@ -75,7 +75,6 @@ query allForms {
           title
           icon
           description
-          code
           type
           value
           min
