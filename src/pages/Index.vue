@@ -16,14 +16,17 @@
           >AI Commons</a>.
           <!-- Partager vos traLink to AI Commons -->
         </div>
-        <el-button
-          class="start"
-          round
-          type="primary"
-          icon="el-icon-plus"
-          v-if="!active"
-          @click="active = true"
-        >Start</el-button>
+        <div class="action">
+          <el-button
+            class="start"
+            round
+            type="primary"
+            icon="el-icon-plus"
+            v-if="!active"
+            @click="active = true"
+          >Start</el-button>
+          <div class="cgp"><g-link to="/Disclamers">Terms of Service</g-link></div>
+        </div>
       </div>
       <super-summary :forms="forms"/>
     </div>
@@ -108,15 +111,17 @@ export default {
   },
   computed: {
     actives() {
-      return this.forms.map(form =>
-        form.options.filter(
-          field =>
-            (["checkbox", "checkbox-slider"].includes(field.type) &&
-              field.check === true) ||
-            (!["checkbox", "checkbox-slider"].includes(field.type) &&
-              field.value)
+      return this.forms
+        .map(form =>
+          form.options.filter(
+            field =>
+              (["checkbox", "checkbox-slider"].includes(field.type) &&
+                field.check === true) ||
+              (!["checkbox", "checkbox-slider"].includes(field.type) &&
+                field.value)
+          )
         )
-      ).filter(options => options.length);
+        .filter(options => options.length);
     },
     forms() {
       return this.$page.allForms.edges.map(edge => edge.node);
@@ -136,7 +141,7 @@ export default {
     },
     prev() {
       this.currentStep = Math.max(0, this.currentStep - 1);
-    },
+    }
   }
 };
 </script>
@@ -243,6 +248,7 @@ export default {
   }
 
   .side {
+    position: relative;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
@@ -266,6 +272,11 @@ export default {
       justify-content: flex-start;
     }
 
+    .cgp {
+      font-size: 16px;
+      opacity: 0.5;
+    }
+
     .intro {
       .about {
         max-width: 30rem;
@@ -279,12 +290,19 @@ export default {
         }
       }
 
+      .action {
+        display: flex;
+        align-items: center;
+        margin: 2rem;
+        margin-top: 0;
+      }
+
       .start {
-        margin: 0 2rem;
         display: none;
 
         @media screen and (min-width: 1050px) {
           display: block;
+          margin-right: 1rem;
         }
       }
     }
