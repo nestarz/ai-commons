@@ -252,6 +252,9 @@ export default {
 }
 
 .license {
+  a {
+    color: #6040ff !important;
+  }
   flex: 1;
   border-top: 1px solid #eee;
   margin-top: 0.5rem;
@@ -268,10 +271,6 @@ export default {
   .content {
     font-size: 16px;
     background: white;
-
-    a:not(.button) {
-      color: #6040ff !important;
-    }
 
     .header {
       display: flex;
