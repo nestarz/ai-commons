@@ -1,6 +1,6 @@
 <template>
   <div class="license">
-    <el-button class="showPdf" round @click="print">Show PDF</el-button>
+    <el-button class="showPdf" round @click="print">Download PDF</el-button>
     <div ref="license" class="content">
       <div class="body markdown-body">
         <div class="header">
