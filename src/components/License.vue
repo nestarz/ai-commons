@@ -1,8 +1,6 @@
 <template>
   <div class="license">
-    <el-button class="showPdf" round @click="print">
-      Print PDF
-    </el-button>
+    <el-button class="showPdf" round @click="print">Show PDF</el-button>
     <div ref="license" class="content">
       <div class="body markdown-body">
         <div class="header">
@@ -70,7 +68,7 @@ export default {
     return {
       benefits: 0,
       contributor_name: "Unknown",
-      pdfuri: null,
+      pdfuri: null
     };
   },
   computed: {
@@ -106,7 +104,7 @@ export default {
   mounted() {},
   methods: {
     print() {
-      const Printd = require('printd');
+      const Printd = require("printd");
       const printd = new Printd.Printd();
       printd.print(this.$refs.license, [
         "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css",
@@ -262,13 +260,18 @@ export default {
   .showPdf {
     margin-bottom: 1rem;
     width: 100%;
+    color: #6040ff;
+    background: #f6ecff;
+    border-color: #c6b3ff;
   }
 
   .content {
-    padding: 3rem;
     font-size: 16px;
     background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+
+    a:not(.button) {
+      color: #6040ff !important;
+    }
 
     .header {
       display: flex;
@@ -278,9 +281,9 @@ export default {
 
       img {
         width: 80%;
+        display: none;
       }
       .summary {
-        margin-top: 6rem;
         background: rgba(135, 119, 192, 0.08);
         border-radius: 20px;
         color: rgba(0, 0, 0, 0.719);
@@ -303,7 +306,7 @@ export default {
     }
 
     /deep/ h1 {
-      margin-top: 10rem;
+      margin-top: 4rem;
     }
 
     /deep/ h3 {
