@@ -1,244 +1,208 @@
 id: disclamer
 license: |-
-  # Conditions Générales d’Utilisation de la Plateforme 
+  1. Preambles
 
-  **NOUS VOUS REMERCIONS POUR VOTRE INTÉRÊT POUR LA PLATEFORME AI COMMONS. EN CLIQUANT SUR «J'ACCEPTE» OU EN ACCEDANT A LA PLATEFORME ET/OU AUX SERVICES AI COMMONS (NOTAMMENT, LA PLATEFORME ET LES LICENCES), L’INTERNAUTE RECONNAÎT AVOIR LU, COMPRIS ET ACCEPTÉ D’ÊTRE LIÉ ET ENGAGÉ PAR LES TERMES DES PRÉSENTES CGP.**
+  This License is concluded between the Contributor and the User (hereinafter "the Parties") and is intended to define the conditions under which the Contributor grants to the User, who accepts, the personal right, free of charge , non-transferable, non-sublicensable and non-exclusive to use, for the entire world and irrevocably, the Licensed Common as described in this License, SUBJECT TO THE PROVISIONS CONTAINED IN THE SPECIFIC TERMS. When the User accepts the terms of this License (defined below), the User agrees to be bound by the terms and conditions of this License and to execute them.
 
-  ## Préambule 
+  The contractual set binding the User and the Contributor under the terms of this User License consists of:
 
-  Les Présentes Conditions Générales d’utilisation de la Plateforme (ci-après, “les CGP”) sont conclues entre l’Internaute et AI Commons (ci-après, “les Parties”). Par principe, les présentes CGP s'appliquent à l’utilisation par l’Internaute de l’ensemble des Services AI Commons. 
+  *   the GTU, previously accepted by the User and the Contributor,
+  *   this User License, and
+  *   the Specific Terms as selected and assigned to the Licensed Common by the Contributor.
+  2. Definitions
 
-  En utilisant cette plateforme, le Contributeur déclare faire sienne la déclaration AI Commons ci-après reproduite : 
+  ** \
+  The terms defined below shall have the following meanings between the Parties:**
 
-  _“Déclaration AI Commons”_
+  \
+  **Attributions.** "Attributions" means the specific conditions under which the rights granted by the Contributor in the License apply. The Attributions selected in the Specific Terms by the Contributor prevail over the terms of this User License. 
 
-  L’Internaute est tenu à chaque visite de prendre connaissance d’éventuelles évolutions des CGP. Les termes des présentes CGP peuvent, de temps en temps, évoluer. Lorsque les évolutions seront considérées comme majeures par AI Commons, une notice d’information sera publiée en ce sens sur la Plateforme. Le fait pour l’Internaute de continuer à utiliser et accéder aux Services AI Commons manifeste son acceptation des évolutions des CGP. 
+  **License.** "License" or "AI Commons License" means the binding Agreement concluded between the User and the Contributor, which consists of: the GTU previously accepted by the User and the Contributor when they access the Platform, this User License, and the Specific Terms as selected and assigned to the Licensed Common, attached to this User License.
 
-  Ces CGP ne sont pas des conditions générales de vente ou des conditions générales de prestations de services. En aucun cas les Services AI Commons ne peuvent être considérés comme des prestations de conseil, notamment juridique. 
+  **Contributor.** "Contributor" means the natural or legal person granting the rights and duties to the User by this License.
 
-  L’ensemble contractuel liant les Parties se compose : 
+  **Commercial Uses.** "Commercial Uses" means the User's use of the Licensed Common for the purpose of obtaining a commercial advantage or financial compensation / benefits.
 
-  - des présentes CGP, 
-  - des Conditions Spécifiques de la Common sous Licence sous Licence telles que définies par le Contributeur lors de la mise en dépôt de la Common sous Licence sous Licence dans le cadre du formulaire 
+  **Common under License.** "Licensed Common" means the literary or artistic work, algorithm, database, training dataset or the model on which the Contributor grants the User the present License. The nature of the Licensed Common and the different specific attributions selected by the Contributor for it are detailed in the Specific Terms.
 
-  ## Définition 
+  **Derivative work.** "Derivative Work" means a copyrighted Work created by the User from the Licensed Common, in whole or in part, or incorporating it, without the assistance of the Contributor.
 
+  **Sui generis right of databases**. "Sui generis right of databases" is a right separated from copyright, derived from Directive 96/9 / EC of the European Parliament and of the Council of March 11, 1996, on the protection of databases. This sui generis right refers to the right and protection of the producer of a database on the content of the database when the constitution, verification or presentation of the database attests of a substantial financial, material or human investment.
 
-  **Les termes ci-dessous définis auront entre les parties la signification suivante :**
+  **License of the Derivative Work.** "License of the Derivative Work" means the license under which the User shares a Derived Work from the Licensed Common.
 
+  **Platform.** "Platform" means the AI ​​Commons platform available online at https://aicommons.com/
 
-  **Contributeur.** “Contributeur” désigne la personne physique ou morale octroyant les droits et devoirs à l’Utilisateur par une Licence . 
+  **User.** "User" means the natural or legal person beneficiary of the rights and duties granted by this License.
 
 
-  **Common sous Licence sous Licence.** “Common sous Licence sous Licence” désigne l’oeuvre littéraire ou artistique, algorithme, base de données, données d'entraînement ou le modèle sur lequel le Contributeur accorde à l’Utilisateur une Licence. La nature de la Common sous Licence sous Licence et les différentes attributions spécifiques sélectionnées par le Contributeur pour celle-ci lors de sa mise en ligne de la Common sous Licence sur la Plateforme sont détaillées dans les Conditions Spécifiques. 
 
+  3. Perimeter 
 
-  **Internaute.** “Internaute” désigne toute personne physique accédant à la Plateforme et donc aux Services AI Commons. Les Contributeurs et les Utilisateurs sont des Internautes. 
+  The grant by the Contributor of the rights listed below is subject to compliance by the User with the terms of this License.
 
 
-  **Plateforme.** “Plateforme” (ou “AI Commons”) désigne la plateforme AI Commons accessible en ligne à l’adresse https://aicommons.com/ 
+  ## 
+      3.1 License
 
+  \
+  By the present License, the Contributor grants to the User, who accepts it, for the Duration defined in article 6, the personal, free, non-transferable and non-sublicensable and non-exclusive right to use, for the whole World and irrevocably (except for the exercise of the provisions of clause 6 "Term and Termination"), the Licensed Common in the following manner (subject to any limitations and exceptions applicable to the Licensed Common, in particular provided in the Specific Terms): 
 
-  **Utilisateur.** “Utilisateur” désigne la personne physique ou morale bénéficiaire des droits et devoirs octroyés par une Licence. 
 
 
-  **Services AI Commons.** ”Services AI Commons” désigne l’ensemble des informations, publications, documents et outils accessibles sur la Plateforme, notamment les Licences. Sont exclus des Services AI Commons les Commons sous Licences. 
+  1. the User has the right to reproduce and share the Licensed Common, 
+  2. the User has the right to produce, reproduce and share any Derivative Works (being specified that sharing is prohibited in the event that the Specific Terms provide for the prohibition of Derivative Works) of the Licensed Common, in its whole or in part, subject to the provisions of the Specific Terms.
 
+  ## 
+      3.2 Limitations and specific terms Conditions Spécifiques
 
-  ## Objet 
 
+  \
+  This License is granted subject to any limitations and exceptions applicable to the Licensed Common, in particular provided in the Specific Terms that are an integral part of the License that binds the User and the Contributor, and may in particular provide: 
 
-  La présente convention a pour objet d’organiser les droits et les devoirs des Internautes lorsqu’ils accèdent à la Plateforme et aux Services AI Commons, les Licences, ainsi que de présenter les conditions de bonne utilisation de la Plateforme. 
 
 
-  ## Entrée en vigueur - Durée 
+  1. Prohibition of Commercial Uses, and / or 
+  2. Prohibition of Derivative Works. In any event, if the Licensed Common User reproduces and shares a Derivative Work of the Licensed Common, the Derived Work License shall not infringe the terms of this License and the use of the Licensed Common by its users.
 
+  ## 
+      3.3 Perimeter of the granted rights
 
-  ### Entrée en vigueur 
 
+  Subject to any limitations contained in the Specific Terms, it is stated that the rights granted include, for the duration of the License defined in article 6:
 
-  EN CLIQUANT SUR «J'ACCEPTE» OU EN ACCEDANT A LA PLATEFORME ET/OU AUX SERVICES AI COMMONS (NOTAMMENT, LA PLATEFORME, LE SITE WEB, ET LES LICENCES), L’INTERNAUTE RECONNAÎT AVOIR LU, COMPRIS ET ACCEPTÉ D’ÊTRE LIÉ ET ENGAGÉ PAR LES TERMES DES PRÉSENTES CGP. 
+  _(i) The Reproduction Right:_ the right to reproduce all or part of the Licensed Common, without limitation in number, on any known or unknown media;
 
+  _(ii) The right to adapt:_ the right to modify all or part of the Licensed Common, to carry out corrective, adaptive and evolutionary maintenance, to make new versions or new developments, to decompile, rewrite, translate in any language, transcribe in any programming language, cover any configuration, interface with any software, database, computer product, reuse the algorithms for any purpose, integrate all or part to or in works existing or future, and in all media mentioned in this article.
 
-  A l’occasion de cette acceptation, l’internaute déclare également avoir l'autorité légale d'accepter les présentes CGP au nom de l’Internaute et/ou de toute partie que qui pourrait être représentée par l’Internaute dans le cadre de son utilisation des Services AI Common. 
+  _(iii) The right of representation:_ the right to communicate to the public the Licensed Common, directly or indirectly, by any known or unknown means or network of communication, in any form, and to the general public or categories of public in particular, so that everyone can access it from the place and at the moment he chooses individually.
 
-  Sous réserve de l’application éventuelle de l’article Résiliation, les CGP restent en vigueur pour une durée indéterminée. Les présentes conditions générales d’utilisation de la plateforme sont opposables pendant toute la durée d’utilisation de la plateforme et jusqu’à ce que de nouvelles conditions générales d’utilisation remplacent les présentes. L’internaute peut à tout moment renoncer à utiliser la Plateforme mais reste responsable de toute utilisation antérieure. 
+  In any case, the User agrees not to share the Licensed Common under technical conditions or under terms that may restrict its use in relation to the conditions of this License.
 
 
-  ### Résiliation 
+  ## 3.4 Media 
 
+  \
+  For all the aforementioned rights, the modes of exploitation by all are understood as the vectors, media, techniques or communication media, of any nature, known or unknown, and in particular: the direct or indirect diffusion by any electronic means, telecommunication and electronic communication, satellite or cable, television terrestrial or space, analog or digital, radio, intranet and internet networks, fixed or mobile telephone networks, any client-server technology, client-client lightweight, client-heavy, data cloud, media of any kind, paper, electronic, magnetic, optical, disk, network, floppy, DVD, CDV, CDI, CD Rom, CD Worm, computers, smartphones, digital tablets, as well reproduction on any object, material or material. The User is authorized to make the technical modifications made necessary by the media to enable him to exercise the rights of this License. The fact of making technical modifications made necessary by a medium does not give rise to the creation of a Derivative Work.
 
-  En cas de manquement substantiel par l’internaute, non réparé dans un délai de 30 jours à compter de l’envoi d’une lettre recommandée avec avis de réception notifiant le manquement en cause, l’autre partie pourra prononcer la résolution ou la résiliation des CGP aux torts exclusifs de la partie défaillante sans préjudice de tous dommages et intérêts auquel elle pourrait prétendre en vertu des présentes. 
+  3.5 Know-how and methods.
 
+  Each Party retains ownership of the methods, know-how and intellectual property rights it held prior to this License (prior knowledge).
 
-  En tout état cause, sont considérés comme des manquements substantiels : 
+  Where necessary, the Contributor grants to the User a free non-exclusive license on his prior knowledge, to the extent that it is necessary for the User to exercise the rights that he has acquired under the this License. The know-how acquired by the User on the occasion of this License remains with him permanently and may be freely exploited by him, even if this know-how incorporates the Contributor's prior knowledge. In general, the Contributor is forbidden to oppose to the User his previous knowledge, in particular the patents he holds, to prevent or hinder the exercise by the User of the rights he has acquired under the this License.
 
-  - le non-respect avéré par un Utilisateur des termes d’une Licence le liant à un Contributeur tel que garanti à l’article 6.3, 
-  - le fait pour un Contributeur de manquer à sa garantie telle que prévue à l’article 6.2 
 
+  ## 3.6 Other Intellectual property rights
 
-  ## Plateforme 
+  \
+  This License does not cover the moral rights of the Licensed Common or any patents on the Licensed Common ("other intellectual property rights"), or any related rights such as the _sui generis_ database right. 
 
+  In any case, it is agreed between the Parties that the Contributor, the owner of these other intellectual property rights, grants a right of use to the Common to allow its use under license by the User. Accordingly, the latter undertakes to exercise to the minimum extent possible these other intellectual property rights relating to the Licensed Common.
 
-  ### Accès à la Plateforme AI Commons 
 
+  ## 3.7 Attributions
 
-  L’accès à la plateforme est libre. 
+  \
+  This License is licensed by the Contributor to the User subject thereto by the terms of the License and including the Specific Terms assigned to the Common by the Contributor. 
 
+  The Specific Terms applicable to this License and accepted by the User are attached to this User License.
 
-  ### Publicité et promotion de la plateforme 
 
 
-  AI Commons se réserve la possibilité de diffuser, à titre gracieux ou payant, des messages publicitaires ou promotionnels sur son site. 
+  4. Guarantee
 
+  \
+  The Contributor grants a license to the Common on an "as-is" basis and does not guarantee, therefore, the User against any malfunctions and anomalies of the Licensed Common. The Contributor declares to own or have the rights to license the Licensed Commons through the use of the AI ​​Commons Services and / or the Platform.
 
-  ### Propriété intellectuelle 
 
 
-  Le contenu de la Plateforme, la structure générale ainsi que les logiciels, textes, images animées ou non, photographies, son savoir-faire et tous les autres éléments composant la plateforme sont la propriété exclusive de AI Commons ou des tiers qui lui ont concédé une licence. 
+  5. Liability 
 
+  \
+  The Contributor excludes from his liability to the User under this License on any legal basis of liability whatsoever, any damage (loss or expense), whether direct or indirect, punitive or consequential, arising from the use of this License and / or the Licensed Common, whether such damage has been foreseeable or not, or that the User has been informed of the possibility of such damage in advance or not.
 
-  Les présentes CGP n’emportent aucune cession d’aucune sorte de droit de propriété intellectuelle sur les éléments appartenant à AI Commons ou ayants droit tels que les signes distinctions, documents, contenus, images, textes littéraires, travaux artistiques, marques, chartes graphiques. Notamment, la mise à disposition des Licences par AI Common ne peut pas être interprétée comme une quelconque cession des droits de propriété intellectuelle de la Plateforme sur ces contenus. 
 
 
+  6. Term and termination
 
-  En conséquence, Les Contributeurs et les Utilisateurs s'interdisent tout agissement et tout acte susceptible de porter atteinte directement ou non aux droits de propriété intellectuelle de AI Commons. 
+  6.1 Term**.**
 
+  \
+  This License comes into force on the date of acceptance by the Parties. It is granted for the term of protection of the rights conferred on the Licensed Common by current and future laws governing intellectual property, unless otherwise provided herein and subject to the possible application of the Article Termination.
 
-  Seule une utilisation conforme à la destination de la Plateforme est autorisée. 
+  6.2 Termination. 
 
+  In the event of any breach by the User of any obligation herein, the License will automatically be suspended. The User will then have a period of 30 days to repair the breach from the date on which he became aware of the breach in question. If the User terminates his breach within this period, the suspension of the License will end.
 
-  ## Responsabilité de l’Internaute 
+  In case of breach by one of the parties to any obligation of the present not repaired within the 30 days from the information of the breach in question, the License will be automatically terminated, without prejudice to all damages and interests to which it could claim under these presents.
 
+  If the Contributor licenses the Licensed Common under other terms and conditions in parallel with this License or ceases to make available the Licensed Common does not result in the termination of this License.
 
-  ### Utilisation conforme 
 
 
-  Tous les Utilisateurs et les Contributeurs de la plateforme s’engagent à respecter la déclaration AI Commons, les valeurs, les principes définis dans les présentes CGP. Les Utilisateurs s’engagent à utiliser les Services AI Commons en conformité avec l’ensemble des lois et réglementations applicables et sans porter atteinte à l’intégrité des services ni à des droits de tiers. 
+  7. General provisions
 
+  7.1 Force majeure. 
 
-  L’internaute s’engage à n’utiliser les services du site ainsi que l’ensemble des informations auxquelles il pourra avoir accès que pour des raisons personnelles et dans un but conforme à l’ordre public, aux bonnes mœurs et aux droits des tiers. 
+  \
+  Cases of force majeure will suspend the performance of the License. If the impediment is final, the License is automatically resolved and the parties are released from their obligations under the conditions provided for in Articles 1351 and 1351-1 of the Civil Code. Expressly, are regarded as case of force majeure or fortuitous cases those usually retained by the jurisprudence of the French courts and tribunals.
 
+  
 
-  Les Utilisateurs et les Contributeurs s’engagent à respecter les termes des Licences qui les lient. 
+  7.2 Legal authorizations. 
 
+  The Parties undertake to dispose of all the legal and administrative authorizations necessary for the execution of these terms. The Parties undertake to collaborate for the realization of new legal and administrative authorizations and for any modifications of authorizations already carried out.
 
-  ### Garantie du Contributeur 
+  
 
+  7.3 Waiver. 
 
-  Le Contributeur déclare être propriétaire ou avoir les droits de concéder des Licences sur les Commons sous Licences via l’utilisation des Services AI Commons. Il en garantit la jouissance paisible à tous les Utilisateurs et garantit à ce titre qu’aucun de ses Commons sous Licence ne viole ou enfreint des droits de tiers, notamment des droits d’auteurs, de marques commerciales, la confidentialité, ou obligation contractée sur ce Commons sous Licence avec un tiers. 
+  The parties mutually agree that the fact for one of the Parties tolerates a situation does not have the effect of granting the other party acquired rights. Moreover, such a tolerance cannot be interpreted as a waiver of the rights in question.
 
+  
 
-  ### Garantie de l’Utilisateur 
+  7.4 Sincerity**. **
 
+  The parties declare these commitments sincere. As such, they declare that they have no information to their knowledge which, if communicated, would have changed the consent of the other party.
 
-  L’Utilisateur s’engage à respecter les termes de la Licence qui le lie au Contributeur. 
+  
 
+  7.5 Relationship of the parties.** **
 
-  ### Usages commerciaux des Commons 
+  The parties acknowledge that they act as independent parties to each other and expressly declare that they are and will remain, for the duration of this agreement, independent business and professional partners. This License does not constitute an association, a franchise, or a mandate given by one of the parties to the other party and can in no way be interpreted as a commercial agency contract, or any representation whatsoever. Neither party can make a commitment on behalf of the other party. In addition, each party remains solely responsible for its actions, claims, commitments, benefits, products and personnel.
 
+  7.6 Titles. 
 
-  Les Usages Commerciaux sont définis librement par le Contributeur dans la Licence. Il vont de l’interdiction des Usages Commerciaux à leur autorisation contre éventuellement partage des bénéfices du don à la licence payante. 
+  In case of difficulties of interpretation resulting from a contradiction between any of the titles appearing at the beginning of the clauses and any of the clauses, the titles will be declared non-existent.
 
+  
 
-  ## Responsabilité de la Plateforme 
+  7.7 Nullity. 
 
+  If one or more stipulations of this License are held invalid or declared as such pursuant to a law, regulation or following a decision of a competent jurisdiction, the other stipulations will retain all their strength and reach.
 
-  ### Limitation de responsabilité 
+  
 
-  Dans la mesure la plus autorisée par la loi applicable, AI Commons met à disposition les licences AI Commons “en l’état”, c’est-à-dire sans aucune garantie relative aux dites Licences, aux Commons sous Licence, ou à toute autre information ou Service AI Commons sur la Plateforme en général. En aucun cas la plateforme n’est engagée autrement que par le respect des valeurs qui figurent dans les présentes. 
+  7.8 Integrality. 
 
+  This License cancels and replaces all quasi-contracts, implicit and explicit commitments, promises having the same purpose as hereof. However, this clause is not intended to prevent the use of such documents but to assess the legal quality of the consents exchanged during the formation hereof.
 
-  AI Commons ne publie pas les Commons sous Licence. AI Commons ne saurait être responsable : de la qualité du service, le service étant proposé « en l’état » ; de la perturbation de l’utilisation du site ; de l’impossibilité d’utiliser le site ; des atteintes à la sécurité informatique, pouvant causer des dommages aux matériels informatiques des utilisateurs et à leurs données ; de l’atteinte aux droits des utilisateurs de manière générale. 
+  
 
+  7.9 Survival
 
-  ### Préjudice 
+  Sections 1, 2, 4, 5, 6, and 7 will survive the termination or expiration of this License.
 
+  7.10 Assignment 
 
-  L’internaute renonce à faire valoir à l’encontre de la plateforme tout préjudice lié à l’utilisation de la Plateforme, sur quelque fondement juridique de responsabilité que ce soit, tout dommage (perte ou dépense), qu’il soit direct ou indirect, punitif ou consécutif, découlant de l’utilisation de la Plateforme et/ou des Services AI Commons, que de tels dommages aient été prévisibles ou non ou que l’Internaute ait été informé de la possibilité de tels dommages au préalable ou non. Sont notamment exclus, qu’ils soient direct ou indirects, les dommages suivants : atteinte à l’image de marque, perte de profits, perte de chiffre d’affaire. 
+  Neither party may assign any of its rights or obligations hereunder, whether by operation of law or otherwise, without the other party’s prior written consent will not be able to be the object of a total or partial cession, in payment or free of charge, by one of the parties, without the prior written agreement of the other Party. 
 
+  Without prejudice to the above, the transfer in the context of a restructuring, merger or acquisition is authorized.
 
-  ### Prescription 
+  
 
+  7.11 Communication between the Parties. 
 
-  En tout état de cause toute action en responsabilité à l’encontre de la plateforme est prescrit dans une durée de un (1) an à compter de la connaissance par l’Internaute pouvant engager la responsabilité de la plateforme. 
+  \
+  For the execution of this License and unless otherwise provided, the Parties agree to address all correspondence to the addresses (postal and / or electronic) provided by the User and the Contributor in the Specific Conditions. Any change of address shall be reported to the other Party.
 
-
-  ### Assurance 
-
-
-  Les Contributeurs et les Utilisateurs peuvent s’ils le souhaitent disposer d’un contrat d’assurance. En l’état, aucune assurance n’est prévue pour indemniser un quelconque préjudice lié à l’utilisation des Services AI Commons et de la présente Plateforme. 
-
-
-  ## Dispositions générales 
-
-
-  ### Force majeure. 
-
-
-  Les cas de force majeure suspendront l’exécution de la Licence. Si l'empêchement est définitif, la Licence est résolu de plein droit et les parties sont libérées de leurs obligations dans les conditions prévues aux articles 1351 et 1351-1 du Code civil. De façon expresse, sont considérés comme cas de force majeure ou cas fortuits ceux habituellement retenus par la jurisprudence des cours et tribunaux français. 
-
-
-  ### Autorisations légales. 
-
-  Les parties s’engagent à disposer de l’ensemble des autorisations légales et administratives nécessaires à l’exécution des présentes. Les parties s’engagent à collaborer pour la réalisation de nouvelles autorisations légales et administratives et pour toutes modifications d’autorisations déjà réalisées. 
-
-
-  ### Tolérance. 
-
-
-  Les parties conviennent réciproquement que le fait pour l’une des parties de tolérer une situation n’a pas pour effet d’accorder à l’autre partie des droits acquis. De plus, une telle tolérance ne peut être interprétée comme une renonciation à faire valoir les droits en cause. 
-
-
-  ### Sincérité
-
-
-  Les parties déclarent sincères les présents engagements. À ce titre, elles déclarent ne disposer d’aucun élément à leur connaissance qui, s’il avait été communiqué, aurait modifié le consentement de l’autre partie. 
-
-
-  ### Indépendance des parties. 
-
-
-  Les parties reconnaissent agir chacune pour leur propre compte comme des parties indépendantes l’une de l’autre et déclarent expressément qu'elles sont et demeureront, pendant toute la durée de la présente convention, des partenaires commerciaux et professionnels indépendants. La présente Licence ne constitue ni une association, ni une franchise, ni un mandat donné par l’une des parties à l’autre partie et ne saurait en aucun cas être interprété comme un contrat d’agence commerciale, ni de représentation quelconque. Aucune des parties ne peut prendre un engagement au nom et pour le compte de l’autre partie. En outre, chacune des parties demeure seule responsable de ses actes, allégations, engagements, prestations, produits et personnels. 
-
-
-  ### Titres. 
-
-
-  En cas de difficultés d’interprétation résultant d’une contradiction entre l’un quelconque des titres figurant en tête des clauses et l’une quelconque des clauses, les titres seront déclarés inexistants. 
-
-
-  ### Nullité. 
-
-
-  Si une ou plusieurs stipulations des présentes CGP sont tenues pour non valides ou déclarées comme telles en application d’une loi, d’un règlement ou à la suite d’une décision passée en force de chose jugée d’une juridiction compétente, les autres stipulations garderont toute leur force et leur portée. 
-
-
-  ### Intégralité. 
-
-
-  La présente Licence annule et remplace tous quasi-contrats, engagements implicites et explicites, promesses ayant le même objet que les présentes. Toutefois, la présente clause n’a pas pour objet d’empêcher l’utilisation desdits documents mais d’évaluer sur le plan juridique la qualité des consentements échangés lors de la formation des présentes. 
-                                                  
-
-  ### Survie de certaines dispositions 
-
-
-  Les articles 1, 2, 3, 6, 7 et 8 survivront après la résiliation ou l'expiration des présentes CGP. 
-
-
-  ### Cession. 
-
-
-  La présente Licence ne pourra faire l’objet d’une cession totale ou partielle, à titre onéreux ou gracieux, par l’une des parties, sans l’accord écrit et préalable de l’autre partie. 
-
-
-  ### Conciliation préalable 
-
-
-  Préalablement à toute action en arbitrage ou devant les juridictions nationales, les parties conviennent de trouver une solution amiable. 
-
-
-  ### Loi applicable 
-
-
-  Les présentes CGP sont régies par la loi française. Il en est ainsi pour les règles de fond et les règles de forme et ce, nonobstant les lieux d’exécution des obligations substantielles ou accessoires. 

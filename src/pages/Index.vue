@@ -25,7 +25,7 @@
             v-if="!active"
             @click="active = true"
           >Start</el-button>
-          <div class="cgp"><g-link to="/Disclamers">Terms of Service</g-link></div>
+          <div class="cgp"><g-link to="/terms">Terms of Service</g-link></div>
         </div>
       </div>
       <super-summary :forms="forms"/>

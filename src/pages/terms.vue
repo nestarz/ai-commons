@@ -12,7 +12,7 @@ import VueMarkdown from "vue-markdown-v2";
 
 export default {
   metaInfo: {
-    title: "Disclamers"
+    title: "Terms"
   },
   components: {
     VueMarkdown

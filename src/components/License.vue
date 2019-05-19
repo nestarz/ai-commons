@@ -40,6 +40,11 @@
           </div>
         </div>
         <vue-markdown
+          v-for="({ node: { license } }, index) in $static.allDisclamers.edges"
+          :source="license"
+          :key="index"
+        ></vue-markdown>
+        <vue-markdown
           v-for="({ node: { license } }, index) in $static.allPreambules.edges"
           :source="license"
           :key="index"
@@ -53,6 +58,14 @@
 <static-query>
 query allPreambules {
   allPreambules {
+    edges {
+      node {
+				id
+        license
+      }
+    }
+  }
+  allDisclamers {
     edges {
       node {
 				id
