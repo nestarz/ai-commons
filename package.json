@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@gridsome/source-filesystem": "^0.4.1",
+    "axios": "^0.18.0",
     "element-ui": "2.4.11",
     "fs-extra": "^8.0.1",
     "globby": "^9.2.0",
     "gridsome": "^0.6.1",
     "js-yaml": "^3.13.1",
+    "pdf-puppeteer": "^1.1.6",
     "printd": "^1.4.0",
+    "puppeteer": "^1.16.0",
     "sass-loader": "^7.1.0",
     "vue-markdown-v2": "0.1.5",
     "vuex": "^3.1.1"

@@ -1,10 +1,14 @@
 <template>
   <div class="license">
-    <el-button class="showPdf" round @click="print">Download PDF</el-button>
-    <div ref="license" class="content">
+    <div class="showPdf">
+      <el-button class="showPdf" round @click="download">Download PDF</el-button>
+    </div>
+    <div class="pdf-viewer" v-if="pdfuri">
+      <object :data="pdfuri" type="application/pdf" v-if="pdfuri"></object>
+    </div>
+    <div ref="license" class="content" v-show="!pdfuri">
       <div class="body markdown-body">
         <div class="header">
-          <img src="./AIC-logo-black.png">
           <div class="summary" v-if="actives.flat().length">
             <div class="title">Summary</div>
             <div class="disclamer">
@@ -61,6 +65,7 @@ query allPreambules {
 
 <script>
 import VueMarkdown from "vue-markdown-v2";
+import axios from "axios";
 
 export default {
   props: ["forms", "actives"],
@@ -103,6 +108,12 @@ export default {
   },
   mounted() {},
   methods: {
+    async download() {
+      const res = await axios.post("./.netlify/functions/hello", {
+        html: this.$refs.license.innerHTML
+      });
+      this.pdfuri = `data:application/pdf;base64,${res.data}`;
+    },
     print() {
       const Printd = require("printd");
       const printd = new Printd.Printd();
@@ -258,19 +269,41 @@ export default {
   flex: 1;
   border-top: 1px solid #eee;
   margin-top: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 0rem 0rem;
+
+  .pdf-viewer {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+
+    min-height: 100%;
+    object,
+    embed {
+      width: 100%;
+      flex: 1;
+      z-index: 99999;
+    }
+  }
 
   .showPdf {
-    margin-bottom: 1rem;
     width: 100%;
-    color: #6040ff;
-    background: #f6ecff;
-    border-color: #c6b3ff;
+    padding: 1rem 2rem;
+
+    button {
+      color: #6040ff;
+      background: #f6ecff;
+      border-color: #c6b3ff;
+    }
   }
 
   .content {
     font-size: 16px;
     background: white;
+    padding: 1rem 2rem;
+
+    .hide-client {
+      display: none;
+    }
 
     .header {
       display: flex;
@@ -278,10 +311,6 @@ export default {
       justify-content: space-between;
       align-items: center;
 
-      img {
-        width: 80%;
-        display: none;
-      }
       .summary {
         background: rgba(135, 119, 192, 0.08);
         border-radius: 20px;
