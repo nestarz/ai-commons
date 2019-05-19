@@ -1,6 +1,6 @@
 <template>
   <div class="license">
-    <div class="showPdf">
+    <div class="showPdf" v-if="!pdfuri">
       <el-button class="showPdf" round @click="download">Download PDF</el-button>
     </div>
     <div class="pdf-viewer" v-if="pdfuri">
@@ -276,7 +276,7 @@ export default {
     flex: 1;
     flex-wrap: wrap;
 
-    min-height: 100%;
+    min-height: 90.5vh;
     object,
     embed {
       width: 100%;
