@@ -122,18 +122,23 @@ export default {
   mounted() {},
   methods: {
     async download() {
-      const res = await axios.post(
-        "https://puppeteer-pdf.nestarz.now.sh/puppeteer",
-        JSON.stringify({
-          html: this.$refs.license.innerHTML
-        }),
-        {
-          headers: {
-            "Content-Type": "application/json"
+      try {
+        const res = await axios.post(
+          "https://puppeteer-pdf.nestarz.now.sh/puppeteer",
+          JSON.stringify({
+            html: this.$refs.license.innerHTML
+          }),
+          {
+            headers: {
+              "Content-Type": "application/json"
+            }
           }
-        }
-      );
-      this.pdfuri = `data:application/pdf;base64,${res.data}`;
+        );
+        this.pdfuri = `data:application/pdf;base64,${res.data}`;
+      } catch (error) {
+        console.error(error);
+        this.print();
+      }
     },
     print() {
       const Printd = require("printd");
@@ -162,8 +167,7 @@ export default {
           margin-top: 1rem;
         }
 
-        .markdown-body h1,
-        .markdown-body h2 {
+        .markdown-body h1{
             clear: both;
             page-break-before: always;
             margin-top: 2cm;
