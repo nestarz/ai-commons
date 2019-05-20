@@ -122,7 +122,7 @@ export default {
   mounted() {},
   methods: {
     async download() {
-      const res = await axios.post("./.netlify/functions/hello", {
+      const res = await axios.post("./.netlify/functions/render", {
         html: this.$refs.license.innerHTML
       });
       this.pdfuri = `data:application/pdf;base64,${res.data}`;
