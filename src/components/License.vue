@@ -1,7 +1,7 @@
 <template>
   <div class="license">
     <div class="showPdf" v-if="!pdfuri">
-      <el-button class="showPdf" round @click="download">Download PDF</el-button>
+      <el-button round @click="download">Download PDF</el-button>
     </div>
     <div class="pdf-viewer" v-if="pdfuri">
       <object :data="pdfuri" type="application/pdf" v-if="pdfuri"></object>
@@ -312,12 +312,14 @@ export default {
 
   .showPdf {
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
+    margin-top: 1rem;
 
     button {
       color: #6040ff;
       background: #f6ecff;
       border-color: #c6b3ff;
+      width: 100%;
     }
   }
 
@@ -337,8 +339,8 @@ export default {
       align-items: center;
 
       .summary {
-        background: rgba(135, 119, 192, 0.08);
-        border-radius: 20px;
+        border: 2px solid rgba(135, 119, 192, 0.08);
+        border-radius: 2px;
         color: rgba(0, 0, 0, 0.719);
         .title {
           margin-bottom: 0;
