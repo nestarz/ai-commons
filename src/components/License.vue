@@ -122,9 +122,17 @@ export default {
   mounted() {},
   methods: {
     async download() {
-      const res = await axios.post("./.netlify/functions/render", {
-        html: this.$refs.license.innerHTML
-      });
+      const res = await axios.post(
+        "https://puppeteer-pdf.nestarz.now.sh/puppeteer",
+        JSON.stringify({
+          html: this.$refs.license.innerHTML
+        }),
+        {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      );
       this.pdfuri = `data:application/pdf;base64,${res.data}`;
     },
     print() {

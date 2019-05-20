@@ -1,20 +1,19 @@
 id: disclamer
 license: |-
-  1. Preambles
+  # Preambles
 
   This License is concluded between the Contributor and the User (hereinafter "the Parties") and is intended to define the conditions under which the Contributor grants to the User, who accepts, the personal right, free of charge , non-transferable, non-sublicensable and non-exclusive to use, for the entire world and irrevocably, the Licensed Common as described in this License, SUBJECT TO THE PROVISIONS CONTAINED IN THE SPECIFIC TERMS. When the User accepts the terms of this License (defined below), the User agrees to be bound by the terms and conditions of this License and to execute them.
 
   The contractual set binding the User and the Contributor under the terms of this User License consists of:
 
-  *   the GTU, previously accepted by the User and the Contributor,
-  *   this User License, and
-  *   the Specific Terms as selected and assigned to the Licensed Common by the Contributor.
-  2. Definitions
+  - the GTU, previously accepted by the User and the Contributor,
+  - this User License, and
+  - the Specific Terms as selected and assigned to the Licensed Common by the Contributor.
+  
+  # Definitions
 
-  ** \
-  The terms defined below shall have the following meanings between the Parties:**
+  **The terms defined below shall have the following meanings between the Parties:**
 
-  \
   **Attributions.** "Attributions" means the specific conditions under which the rights granted by the Contributor in the License apply. The Attributions selected in the Specific Terms by the Contributor prevail over the terms of this User License. 
 
   **License.** "License" or "AI Commons License" means the binding Agreement concluded between the User and the Contributor, which consists of: the GTU previously accepted by the User and the Contributor when they access the Platform, this User License, and the Specific Terms as selected and assigned to the Licensed Common, attached to this User License.
@@ -37,36 +36,26 @@ license: |-
 
 
 
-  3. Perimeter 
+  # Perimeter 
 
   The grant by the Contributor of the rights listed below is subject to compliance by the User with the terms of this License.
 
 
-  ## 
-      3.1 License
+  ## License
 
-  \
   By the present License, the Contributor grants to the User, who accepts it, for the Duration defined in article 6, the personal, free, non-transferable and non-sublicensable and non-exclusive right to use, for the whole World and irrevocably (except for the exercise of the provisions of clause 6 "Term and Termination"), the Licensed Common in the following manner (subject to any limitations and exceptions applicable to the Licensed Common, in particular provided in the Specific Terms): 
-
-
 
   1. the User has the right to reproduce and share the Licensed Common, 
   2. the User has the right to produce, reproduce and share any Derivative Works (being specified that sharing is prohibited in the event that the Specific Terms provide for the prohibition of Derivative Works) of the Licensed Common, in its whole or in part, subject to the provisions of the Specific Terms.
 
-  ## 
-      3.2 Limitations and specific terms Conditions Spécifiques
+  ## 3.2 Limitations and specific terms Conditions Spécifiques
 
-
-  \
   This License is granted subject to any limitations and exceptions applicable to the Licensed Common, in particular provided in the Specific Terms that are an integral part of the License that binds the User and the Contributor, and may in particular provide: 
-
-
 
   1. Prohibition of Commercial Uses, and / or 
   2. Prohibition of Derivative Works. In any event, if the Licensed Common User reproduces and shares a Derivative Work of the Licensed Common, the Derived Work License shall not infringe the terms of this License and the use of the Licensed Common by its users.
 
-  ## 
-      3.3 Perimeter of the granted rights
+  ## 3.3 Perimeter of the granted rights
 
 
   Subject to any limitations contained in the Specific Terms, it is stated that the rights granted include, for the duration of the License defined in article 6:
@@ -85,7 +74,7 @@ license: |-
   \
   For all the aforementioned rights, the modes of exploitation by all are understood as the vectors, media, techniques or communication media, of any nature, known or unknown, and in particular: the direct or indirect diffusion by any electronic means, telecommunication and electronic communication, satellite or cable, television terrestrial or space, analog or digital, radio, intranet and internet networks, fixed or mobile telephone networks, any client-server technology, client-client lightweight, client-heavy, data cloud, media of any kind, paper, electronic, magnetic, optical, disk, network, floppy, DVD, CDV, CDI, CD Rom, CD Worm, computers, smartphones, digital tablets, as well reproduction on any object, material or material. The User is authorized to make the technical modifications made necessary by the media to enable him to exercise the rights of this License. The fact of making technical modifications made necessary by a medium does not give rise to the creation of a Derivative Work.
 
-  3.5 Know-how and methods.
+  ## 3.5 Know-how and methods.
 
   Each Party retains ownership of the methods, know-how and intellectual property rights it held prior to this License (prior knowledge).
 
@@ -94,7 +83,6 @@ license: |-
 
   ## 3.6 Other Intellectual property rights
 
-  \
   This License does not cover the moral rights of the Licensed Common or any patents on the Licensed Common ("other intellectual property rights"), or any related rights such as the _sui generis_ database right. 
 
   In any case, it is agreed between the Parties that the Contributor, the owner of these other intellectual property rights, grants a right of use to the Common to allow its use under license by the User. Accordingly, the latter undertakes to exercise to the minimum extent possible these other intellectual property rights relating to the Licensed Common.
@@ -109,28 +97,25 @@ license: |-
 
 
 
-  4. Guarantee
+  # 4. Guarantee
 
-  \
   The Contributor grants a license to the Common on an "as-is" basis and does not guarantee, therefore, the User against any malfunctions and anomalies of the Licensed Common. The Contributor declares to own or have the rights to license the Licensed Commons through the use of the AI ​​Commons Services and / or the Platform.
 
 
 
-  5. Liability 
+  # 5. Liability 
 
-  \
   The Contributor excludes from his liability to the User under this License on any legal basis of liability whatsoever, any damage (loss or expense), whether direct or indirect, punitive or consequential, arising from the use of this License and / or the Licensed Common, whether such damage has been foreseeable or not, or that the User has been informed of the possibility of such damage in advance or not.
 
 
 
-  6. Term and termination
+  # 6. Term and termination
 
-  6.1 Term**.**
+  ## 6.1 Term.
 
-  \
   This License comes into force on the date of acceptance by the Parties. It is granted for the term of protection of the rights conferred on the Licensed Common by current and future laws governing intellectual property, unless otherwise provided herein and subject to the possible application of the Article Termination.
 
-  6.2 Termination. 
+  ## 6.2 Termination. 
 
   In the event of any breach by the User of any obligation herein, the License will automatically be suspended. The User will then have a period of 30 days to repair the breach from the date on which he became aware of the breach in question. If the User terminates his breach within this period, the suspension of the License will end.
 
@@ -140,60 +125,59 @@ license: |-
 
 
 
-  7. General provisions
+  # 7. General provisions
 
-  7.1 Force majeure. 
+  ## 7.1 Force majeure. 
 
-  \
   Cases of force majeure will suspend the performance of the License. If the impediment is final, the License is automatically resolved and the parties are released from their obligations under the conditions provided for in Articles 1351 and 1351-1 of the Civil Code. Expressly, are regarded as case of force majeure or fortuitous cases those usually retained by the jurisprudence of the French courts and tribunals.
 
   
 
-  7.2 Legal authorizations. 
+  ## 7.2 Legal authorizations. 
 
   The Parties undertake to dispose of all the legal and administrative authorizations necessary for the execution of these terms. The Parties undertake to collaborate for the realization of new legal and administrative authorizations and for any modifications of authorizations already carried out.
 
   
 
-  7.3 Waiver. 
+  ## 7.3 Waiver. 
 
   The parties mutually agree that the fact for one of the Parties tolerates a situation does not have the effect of granting the other party acquired rights. Moreover, such a tolerance cannot be interpreted as a waiver of the rights in question.
 
   
 
-  7.4 Sincerity**. **
+  ## 7.4 Sincerity.
 
   The parties declare these commitments sincere. As such, they declare that they have no information to their knowledge which, if communicated, would have changed the consent of the other party.
 
   
 
-  7.5 Relationship of the parties.** **
+  ## 7.5 Relationship of the parties.
 
   The parties acknowledge that they act as independent parties to each other and expressly declare that they are and will remain, for the duration of this agreement, independent business and professional partners. This License does not constitute an association, a franchise, or a mandate given by one of the parties to the other party and can in no way be interpreted as a commercial agency contract, or any representation whatsoever. Neither party can make a commitment on behalf of the other party. In addition, each party remains solely responsible for its actions, claims, commitments, benefits, products and personnel.
 
-  7.6 Titles. 
+  ## 7.6 Titles. 
 
   In case of difficulties of interpretation resulting from a contradiction between any of the titles appearing at the beginning of the clauses and any of the clauses, the titles will be declared non-existent.
 
   
 
-  7.7 Nullity. 
+  ## 7.7 Nullity. 
 
   If one or more stipulations of this License are held invalid or declared as such pursuant to a law, regulation or following a decision of a competent jurisdiction, the other stipulations will retain all their strength and reach.
 
   
 
-  7.8 Integrality. 
+  ## 7.8 Integrality. 
 
   This License cancels and replaces all quasi-contracts, implicit and explicit commitments, promises having the same purpose as hereof. However, this clause is not intended to prevent the use of such documents but to assess the legal quality of the consents exchanged during the formation hereof.
 
   
 
-  7.9 Survival
+  ## 7.9 Survival
 
   Sections 1, 2, 4, 5, 6, and 7 will survive the termination or expiration of this License.
 
-  7.10 Assignment 
+  ## 7.10 Assignment 
 
   Neither party may assign any of its rights or obligations hereunder, whether by operation of law or otherwise, without the other party’s prior written consent will not be able to be the object of a total or partial cession, in payment or free of charge, by one of the parties, without the prior written agreement of the other Party. 
 
@@ -201,8 +185,7 @@ license: |-
 
   
 
-  7.11 Communication between the Parties. 
+  ## 7.11 Communication between the Parties. 
 
-  \
   For the execution of this License and unless otherwise provided, the Parties agree to address all correspondence to the addresses (postal and / or electronic) provided by the User and the Contributor in the Specific Conditions. Any change of address shall be reported to the other Party.
 
