@@ -1,12 +1,17 @@
 <template>
   <div class="license">
-    <div class="showPdf" v-if="!pdfuri">
-      <el-button round @click="download">Download PDF</el-button>
+    <div class="showPdf" v-if="!pdfurl">
+      <el-button round @click="download" v-if="!pdfurl">Generate PDF</el-button>
     </div>
-    <div class="pdf-viewer" v-if="pdfuri">
-      <object :data="pdfuri" type="application/pdf" v-if="pdfuri"></object>
+    <div class="pdf-viewer" v-if="pdfurl">
+      <object :data="pdfurl" type="application/pdf" v-if="pdfurl"></object>
     </div>
-    <div ref="license" class="content" v-show="!pdfuri">
+    <div class="showPdf" v-if="pdfurl">
+      <div class="link">
+        <el-input placeholder="pdfurl" v-model="pdfurl" readonly></el-input>
+      </div>
+    </div>
+    <div ref="license" class="content" v-show="!pdfurl">
       <div class="body markdown-body">
         <div class="header">
           <div class="summary" v-if="actives.flat().length">
@@ -86,7 +91,7 @@ export default {
     return {
       benefits: 0,
       contributor_name: "Unknown",
-      pdfuri: null
+      pdfurl: null
     };
   },
   computed: {
@@ -121,6 +126,13 @@ export default {
   },
   mounted() {},
   methods: {
+    success() {
+      this.$notify({
+        title: "Success",
+        message: "License was successfuly generated.",
+        type: "success"
+      });
+    },
     async download() {
       try {
         const res = await axios.post(
@@ -134,10 +146,13 @@ export default {
             }
           }
         );
-        this.pdfuri = `data:application/pdf;base64,${res.data}`;
+        this.pdfurl = res.data;
       } catch (error) {
         console.error(error);
         this.print();
+      }
+      if (this.pdfurl) {
+        this.success();
       }
     },
     print() {
@@ -300,20 +315,24 @@ export default {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
+    flex-direction: column;
 
-    min-height: 90.5vh;
+    min-height: 80.5vh;
     object,
     embed {
       width: 100%;
       flex: 1;
-      z-index: 99999;
+      z-index: 2003;
     }
   }
 
   .showPdf {
     width: 100%;
-    padding: 0 2rem;
-    margin-top: 1rem;
+    padding: 1rem 2rem;
+
+    .link {
+      margin-bottom: 1rem;
+    }
 
     button {
       color: #6040ff;
