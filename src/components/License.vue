@@ -322,7 +322,7 @@ export default {
     embed {
       width: 100%;
       flex: 1;
-      z-index: 2003;
+      z-index: 600;
     }
   }
 

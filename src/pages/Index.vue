@@ -26,6 +26,7 @@
             @click="active = true"
           >Start</el-button>
           <div class="cgp"><g-link to="/terms">Terms of Service</g-link></div>
+          <div class="cgp cgp2">Version Alpha</div>
         </div>
       </div>
       <super-summary :forms="forms"/>
@@ -274,6 +275,9 @@ export default {
     .cgp {
       font-size: 16px;
       opacity: 0.5;
+    }
+    .cgp2 {
+      margin-left: 1rem;
     }
 
     .intro {
