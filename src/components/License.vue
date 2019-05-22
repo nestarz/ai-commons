@@ -130,6 +130,7 @@ export default {
   mounted() {},
   methods: {
     async download() {
+      
       try {
         this.loading = true;
         const res = await axios.post(
