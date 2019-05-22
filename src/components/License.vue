@@ -1,16 +1,5 @@
 <template>
-  <div class="license">
-    <div class="showPdf" v-if="!pdfurl">
-      <el-button round @click="download" v-if="!pdfurl">Generate PDF</el-button>
-    </div>
-    <div class="pdf-viewer" v-if="pdfurl">
-      <object :data="pdfurl" type="application/pdf" v-if="pdfurl"></object>
-    </div>
-    <div class="showPdf" v-if="pdfurl">
-      <div class="link">
-        <el-input placeholder="pdfurl" v-model="pdfurl" readonly></el-input>
-      </div>
-    </div>
+  <div class="license" v-loading="loading">
     <div ref="license" class="content" v-show="!pdfurl">
       <div class="body markdown-body">
         <div class="header">
@@ -57,6 +46,18 @@
         <vue-markdown v-for="(paragraph, index) in paragraphs" :source="paragraph" :key="index"></vue-markdown>
       </div>
     </div>
+    <div class="pdf-viewer" v-if="pdfurl">
+      <object :data="pdfurl" type="application/pdf" v-if="pdfurl"></object>
+    </div>
+    <div class="showPdf" v-if="pdfurl">
+      <div class="link">
+        <el-input placeholder="pdfurl" v-model="pdfurl" readonly></el-input>
+      </div>
+    </div>
+    <div class="showPdf" v-if="!pdfurl">
+      <el-button round @click="download" v-if="!pdfurl">Generate PDF | Get Link</el-button>
+      <el-button round @click="print" v-if="error">(Fallback) Print PDF</el-button>
+    </div>
   </div>
 </template>
 
@@ -90,6 +91,8 @@ export default {
   data() {
     return {
       benefits: 0,
+      loading: false,
+      error: null,
       contributor_name: "Unknown",
       pdfurl: null
     };
@@ -126,15 +129,9 @@ export default {
   },
   mounted() {},
   methods: {
-    success() {
-      this.$notify({
-        title: "Success",
-        message: "License was successfuly generated.",
-        type: "success"
-      });
-    },
     async download() {
       try {
+        this.loading = true;
         const res = await axios.post(
           "https://puppeteer-pdf.nestarz.now.sh/puppeteer",
           JSON.stringify({
@@ -148,11 +145,22 @@ export default {
         );
         this.pdfurl = res.data;
       } catch (error) {
-        console.error(error);
-        this.print();
+        this.error = error;
+      } finally {
+        this.loading = false;
       }
       if (this.pdfurl) {
-        this.success();
+        this.$notify({
+          title: "Success",
+          message: "License was successfuly generated.",
+          type: "success"
+        });
+      } else if (this.error) {
+        this.$notify({
+          title: "Error",
+          message: `PDF generation failed. (${this.error})`,
+          type: "error"
+        });
       }
     },
     print() {
@@ -318,6 +326,8 @@ export default {
     flex-direction: column;
 
     min-height: 80.5vh;
+    border-bottom: 1px solid gainsboro;
+
     object,
     embed {
       width: 100%;
@@ -329,16 +339,26 @@ export default {
   .showPdf {
     width: 100%;
     padding: 1rem 2rem;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
     .link {
-      margin-bottom: 1rem;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:before {
+        content: "Permanent link";
+        font-size: 0.8rem;
+        flex-shrink: 0;
+        margin-right: 1rem;
+      }
     }
-
     button {
       color: #6040ff;
       background: #f6ecff;
       border-color: #c6b3ff;
-      width: 100%;
     }
   }
 
@@ -346,6 +366,19 @@ export default {
     font-size: 16px;
     background: white;
     padding: 1rem 2rem;
+    overflow: scroll;
+    max-height: 80.5vh;
+    border-bottom: 1px solid gainsboro;
+
+    &:before {
+      content: 'License Preview';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 120%;
+      padding-bottom: 1rem;
+    }
 
     .hide-client {
       display: none;

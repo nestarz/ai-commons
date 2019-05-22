@@ -25,7 +25,7 @@
             v-if="!active"
             @click="active = true"
           >Start</el-button>
-          <div class="cgp"><g-link to="/terms">Terms of Service</g-link></div>
+          <div class="cgp"><router-link :to="{ name: 'terms' }" >Terms of Service</router-link></div>
           <div class="cgp cgp2">Version Alpha</div>
         </div>
       </div>
